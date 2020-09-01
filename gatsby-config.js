@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Francisco Bianchi Spadaro`,
-    description: `Blog com meus projetos.`,
+    description: `Blog com meus projetos,Novidades Tecnologicas,DevOps e Serviços`,
     position:`©FBS-DEV`,
     author:`@franciscobspadaro`,
   },

@@ -12,7 +12,7 @@ const links = [
         url: "https://www.linkedin.com/in/franciscobspadaro/"
        },
        {
-        label: "EmailOutline",
+        label: "Email",
         url: "mailto:francisco.spadaro@outlook.com"
        },
 
