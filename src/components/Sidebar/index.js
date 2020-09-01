@@ -5,6 +5,7 @@ import MenuLinks from "../MenuLinks"
 import { Link } from "gatsby"
 import catsGIF from "../Sidebar/cats.gif"
 import fbsdevPNG from "../Sidebar/fbsdev.png"
+import devGIF from "../Sidebar/dev.gif"
 
 import * as S from "./styled"
 
@@ -17,6 +18,8 @@ const Sidebar = () => (
     <img src={fbsdevPNG} alt="FBS-DEV" ></img>
 		</Link>
     <img src={catsGIF} width="400" height="200" alt="Funcionarios" ></img> 
+    <img src={devGIF} alt="dev" ></img>
+
   </S.SidebarWrapper>
 )
 
