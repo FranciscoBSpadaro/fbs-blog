@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Francisco Bianchi Spadaro Blog`,
-    description: `blog com meus projetos.`,
-    position:`Back-end,Front-end,DevOps`,
+    title: `Francisco Bianchi Spadaro`,
+    description: `Blog com meus projetos.`,
+    position:`©FBS-DEV`,
     author:`@franciscobspadaro`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
