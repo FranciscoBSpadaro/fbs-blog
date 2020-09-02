@@ -17,7 +17,7 @@ const Sidebar = () => (
     <Link href="https://fbsdev.netlify.app/">
     <img src={fbsdevPNG} alt="FBS-DEV" ></img>
 		</Link>
-    <img src={catsGIF} width="400" height="200" alt="Funcionarios" ></img> 
+    <img src={catsGIF} width="" height="" alt="Funcionarios" ></img> 
     <img src={devGIF} alt="dev" ></img>
 
   </S.SidebarWrapper>
