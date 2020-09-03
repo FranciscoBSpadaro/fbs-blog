@@ -1,17 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
+
 const BlogPost = ({ data }) => {               // conteudo dos posts , e na parte do dangeroushtml é uma forma de dizer que vai entrar uma html supostamente insegura , ele substitui um document.innerHTML
   const post = data.markdownRemark
 
   return (
-    <> 
+    <Layout>
+    <SEO title={post.frontmatter.title} />
       <h1>Title: {post.frontmatter.title}</h1>                             
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>        
-    </>
+      </Layout>
+  
   )
 }
-// varivel criada apartir do graphql , print na pasta do projeto
+// varivel criada apartir do graphql , print na pasta do projeto / $slug encontra o post pelo nome do titulo
 export const query = graphql`
   query Post($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {

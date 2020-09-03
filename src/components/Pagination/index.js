@@ -3,7 +3,7 @@ import propTypes from "prop-types"
 import { Link } from "gatsby"
 
 import * as S from "./styled"
-
+                                                                       // se nao for a primeira pagina entao mostre o link , bool = boleano
 const Pagination = ({
   isFirst,
   isLast,
@@ -12,8 +12,8 @@ const Pagination = ({
   prevPage,
   nextPage,
 }) => (
-  <S.PaginationWrapper>
-    {!isFirst && <Link to={prevPage}>← página anterior</Link>}
+  <S.PaginationWrapper>                   
+    {!isFirst && <Link to={prevPage}>← página anterior</Link>}          
     <p>
       {currentPage} de {numPages}
     </p>

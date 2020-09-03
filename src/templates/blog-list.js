@@ -6,14 +6,14 @@ import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
 import Pagination from '../components/Pagination'
 
-const BlogList = props => {                                 // nova pagina principal''index'' baseada no graphql
+const BlogList = props => {                                 // parametros para a tag pagination , pagecontext vem do parametro context criado no gatsbynodes
   const postList = props.data.allMarkdownRemark.edges
   const { currentPage, numPages } = props.pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`
-  const nextPage = `/page/${currentPage + 1}`
-
+  const isFirst = currentPage === 1                     // primeira pagina = pagina atual
+  const isLast = currentPage === numPages                // ultima pagina = pagina atual = paginal final
+  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`                // se a pagina atual -1 for = a 1 siginifica que ta na home se nao significa que ela ta na pagecurrente-1
+  const nextPage = `/page/${currentPage + 1}`                      // page com currentpage + 1 pq é a prox pagina
+                                                                                          // nova pagina principal''index'' baseada no graphql
   return (
     <Layout>
       <SEO title="Home" />
@@ -48,7 +48,7 @@ const BlogList = props => {                                 // nova pagina princ
     </Layout>
   )
 }
-// variavel para o graphl skip = inteiro = var limit = inteiro ,  variaveis declaradas para filtrar a query e a funcao skip e limit funcionar
+// variavel para o graphl skip = inteiro = var limit = inteiro ,  variaveis declaradas para filtrar a query com funcao skip e limit , prints na pasta
 export const query = graphql`                                    
   query PostList($skip: Int!, $limit: Int!) {            
     allMarkdownRemark(
@@ -76,3 +76,6 @@ export const query = graphql`
 `
 
 export default BlogList
+
+
+// Um Slug é a parte de identificação exclusiva de um endereço da web, normalmente no final da URL

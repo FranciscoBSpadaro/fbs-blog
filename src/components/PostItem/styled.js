@@ -17,7 +17,7 @@ export const PostItemWrapper = styled.section`
   padding: 1rem 1rem;
   width: 100%;
 `
-
+// background props . se background do posts for nulo o padrao sera o #1fa1f2  cor da tag do post
 export const PostItemTag = styled.div`
   align-items: center;
   background: ${props => (props.background ? props.background : "#1fa1f2")};
