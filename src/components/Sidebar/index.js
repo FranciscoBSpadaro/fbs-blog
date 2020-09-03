@@ -3,7 +3,7 @@ import Profile from "../Profile"
 import SocialLinks from "../SocialLinks"
 import MenuLinks from "../MenuLinks"
 import { Link } from "gatsby"
-import fbsdevPNG from "../Sidebar/fbsdev.png"
+
 
 
 import * as S from "./styled"
@@ -13,10 +13,6 @@ const Sidebar = () => (
     <Profile />
     <SocialLinks />
     <MenuLinks />
-    <Link href="https://fbsdev.netlify.app/">
-    <img src={fbsdevPNG} alt="FBS-DEV" ></img>
-		</Link>
-
   </S.SidebarWrapper>
 )
 
