@@ -8,6 +8,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+        // needs to be the first to work with gatsby-remark-images
+        {
+          resolve: `gatsby-source-filesystem`,
+          options: {
+            name: `uploads`,
+            path: `${__dirname}/static/assets/img`,
+          },
+        },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,7 +33,22 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [],
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",            // abriu o objeto e gerou o parametros ao plugin que serve para acha os arquivos que nao estao na msm pasta do post
+            options: {
+              name: "uploads",                               // uploads que consta no resolve: `gatsby-source-filesystem`, acima
+            },
+          },
+          {
+            resolve: "gatsby-remark-images",                // o resolve entao gera parametros de config aos plugins
+            options: {                                        // existe varias options na documentacao desse plugin no gatsby docs
+              maxWidth: 960,                                // tamanho maximo da img
+              linkImagesToOriginal: false,                     // o remark img colaca toda img como link externo por padrao, nao queremos isso e colocamos falso
+            },
+          },
+          `gatsby-remark-lazy-load`,                        // esse é declarado mas nao precisa de configs apenas é importado no gatsby browser
+        ],
       },
     },
     `gatsby-transformer-sharp`,
