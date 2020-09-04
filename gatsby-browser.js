@@ -1,1 +1,2 @@
 import "lazysizes"     // gatsby browser serve para importar bibliotecas ou qql coisa de javascript que queremos fazer fora do react , bibliotecas de third parties como essa lazy 
+require("prismjs/themes/prism-tomorrow.css")    // tema do prism 

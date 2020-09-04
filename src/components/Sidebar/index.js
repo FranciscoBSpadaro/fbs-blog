@@ -15,10 +15,10 @@ const Sidebar = () => (
     <SocialLinks />
     <MenuLinks />
     <Link href="https://fbsdev.netlify.app/">
-    <img src={fbsdevPNG} alt="FBS-DEV" ></img>
+    <img src={fbsdevPNG} width="175" height="105" alt="FBS-DEV" ></img>
 		</Link>
-    <img src={catsGIF} width="" height="" alt="Funcionarios" ></img> 
-    <img src={devGIF} alt="dev" ></img>
+    <img src={catsGIF} width="175" height="122" alt="Funcionarios" ></img> 
+    <img src={devGIF}width="175" height="122" alt="dev" ></img>
 
   </S.SidebarWrapper>
 )

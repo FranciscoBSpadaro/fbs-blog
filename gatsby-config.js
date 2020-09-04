@@ -47,7 +47,8 @@ module.exports = {
               linkImagesToOriginal: false,                     // o remark img colaca toda img como link externo por padrao, nao queremos isso e colocamos falso
             },
           },
-          `gatsby-remark-lazy-load`,                        // esse é declarado mas nao precisa de configs apenas é importado no gatsby browser
+          `gatsby-remark-lazy-load`,    // lazyload é declarado mas nao precisa de configs apenas é importado no gatsby browser
+          `gatsby-remark-prismjs`,                    
         ],
       },
     },

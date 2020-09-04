@@ -41,20 +41,38 @@ exports.createPages = ({ graphql, actions }) => {
             }
             timeToRead
           }
+          next {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
     }
   `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
-          slug: node.fields.slug,         // so interessa o slug e o resto nao precisa
+          slug: node.fields.slug,                               // busca no graphql para dar o contexto de prox post e post anterior
+          previousPost: next,
+          nextPost: previous,       
         },
       })
     })
