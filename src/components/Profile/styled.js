@@ -2,21 +2,21 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const ProfileWrapper = styled.section`
-  color: #ffffff;
+  color: var(--texts);
   display: flex;
   flex-direction: column;
   transition: color 0.5s;
   &:hover {
-    color: #79ff4d;
+    color: var(--highlight);
   }
 `
 
 export const ProfileLink = styled(Link)`
-  color: #ffffff;
+  color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
   &:hover {
-    color: #79ff4d;
+    color: var(--highlight);
   }
 `
 

@@ -21,3 +21,6 @@ const Avatar = () => {
 }
 
 export default Avatar
+
+
+// mudei de fixed para fluid
