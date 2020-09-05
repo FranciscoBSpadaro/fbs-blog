@@ -8,7 +8,7 @@ const Avatar = () => {
       query {
         avatarImage: file(relativePath: { eq: "avatar.png" }) {
           childImageSharp {
-            fluid(maxWidth: 60) {
+            fluid(maxWidth: 70) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
