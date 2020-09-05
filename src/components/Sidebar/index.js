@@ -13,9 +13,6 @@ const Sidebar = () => (
     <Profile />
     <SocialLinks />
     <MenuLinks />
-    <Link href="https://fbsdev.netlify.app/">
-    <img src={fbsdevPNG} width="175" height="105" alt="FBS-DEV" ></img>
-		</Link>
 </S.SidebarWrapper>
 )
 
