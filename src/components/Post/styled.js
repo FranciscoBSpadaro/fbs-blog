@@ -195,7 +195,7 @@ export const MainContent = styled.section`
 
   .gatsby-resp-image-background-image {
     z-index: 2;
-    opacity: 1 !important;
+    opacity: 0 !important;
   }
 
   .gatsby-resp-image-image {
