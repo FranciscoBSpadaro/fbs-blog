@@ -146,3 +146,6 @@ Ele é usado em milhares de sites, incluindo alguns daqueles que você visita di
 
 ----------------------
 obs : nesse projeto nao usei Contentful , em outros posts irei falar sobre ele .
+
+[Sobre Mim](/about)
+
