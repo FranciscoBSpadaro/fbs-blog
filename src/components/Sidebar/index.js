@@ -3,7 +3,6 @@ import Profile from "../Profile"
 import SocialLinks from "../SocialLinks"
 import MenuLinks from "../MenuLinks"
 import { Link } from "gatsby"
-import catsGIF from "../Sidebar/cats.gif"
 import fbsdevPNG from "../Sidebar/fbsdev.png"
 
 
