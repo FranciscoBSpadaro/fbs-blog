@@ -108,7 +108,7 @@ O React (também denominado React.js ou ReactJS) é uma biblioteca JavaScript de
 Em 2015, o Facebook anunciou o módulo React Native, que em conjunto com o React, possibilita o desenvolvimento de aplicativos para Android e iOS utilizando componentes de interface de usuário nativos de ambas plataformas, sem precisar recorrer ao HTML.
 
 Na pesquisa de 2018 sobre hábitos de desenvolvedores do site Stack Overflow, o React foi a terceira biblioteca ou framework mais citado pelos usuários e desenvolvedores profissionais, ficando atrás somente do Node.js e Angular, respectivamente.
-![react](/assets/img/react.png)
+![logoreac](/assets/img/logoreac.png)
 
 #### Links com todas documentações de toda stack utilizada
 - Styled Components:    https://styled-components.com/
@@ -134,6 +134,7 @@ Na pesquisa de 2018 sobre hábitos de desenvolvedores do site Stack Overflow, o 
 - https://www.gatsbyjs.com/starters/?v=2
 - https://www.gatsbyjs.com/plugins/gatsby-plugin-algolia-search/
 - https://www.gatsbyjs.com/docs/custom-html/
+
 # Prism
 Prism é usadado para highlights , efeitos visuais nos textos markdown , ele da um plano de fundo diferenciado para os textos de programadores que usam blogs como eu e quer postar os codigos no blog
 O Prism é um realce de sintaxe leve e extensível, desenvolvido com os padrões da web modernos em mente.
