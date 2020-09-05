@@ -17,8 +17,8 @@ export const SidebarWrapper = styled.aside`
     align-items: flex-start;
     height: auto;
     padding: 1rem 2rem;
-    width: auto;
+    width: 100%;
   `}
 `
   
-// media query ajusta a pagina para celulares
+// media query ajusta a pagina
