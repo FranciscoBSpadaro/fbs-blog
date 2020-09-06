@@ -55,13 +55,17 @@ const MenuBar = () => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o Topo">
+        <S.MenuBarItem 
+        title="Ir para o Topo" className='scroll' 
+        onClick={ () => { 
+          this.scrollToTop();
+           }}
+           >
           <Arrow />
         </S.MenuBarItem>
         </S.MenuBarGroup>
     </S.MenuBarWrapper>
   )
 }
-
 
 export default MenuBar

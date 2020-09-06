@@ -10,3 +10,4 @@ export const ListWrapper = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 `
+// esse é o stilo grid que ta sendo exportado para o blog-list

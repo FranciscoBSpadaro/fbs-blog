@@ -4,38 +4,42 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
-import Pagination from '../components/Pagination'
+import Pagination from "../components/Pagination"
+
+import * as S from "../components/ListWrapper/styled"
 
 const BlogList = props => {                                 // parametros para a tag pagination , pagecontext vem do parametro context criado no gatsbynodes
   const postList = props.data.allMarkdownRemark.edges
   const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1                     // primeira pagina = pagina atual
   const isLast = currentPage === numPages                // ultima pagina = pagina atual = paginal final
-  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`                // se a pagina atual -1 for = a 1 siginifica que ta na home se nao significa que ela ta na pagecurrente-1
+  const prevPage = currentPage - 1 === 1 ? "/" : `/page/${currentPage - 1}`                // se a pagina atual -1 for = a 1 siginifica que ta na home se nao significa que ela ta na pagecurrente-1
   const nextPage = `/page/${currentPage + 1}`                      // page com currentpage + 1 pq é a prox pagina
                                                                                           // nova pagina principal''index'' baseada no graphql
   return (
     <Layout>
       <SEO title="Home" />
-      {postList.map(
-        ({
-          node: {
-            frontmatter: { background, category, date, description, title },
-            timeToRead,
-            fields: { slug },
-          },
-        }) => (
-          <PostItem
-            slug={slug}
-            background={background}
-            category={category}
-            date={date}
-            timeToRead={timeToRead}
-            title={title}
-            description={description}
-          />
-        )
-      )}
+      <S.ListWrapper>
+        {postList.map(
+          ({
+            node: {
+              frontmatter: { background, category, date, description, title },
+              timeToRead,
+              fields: { slug },
+            },
+          }) => (
+            <PostItem
+              slug={slug}
+              background={background}
+              category={category}
+              date={date}
+              timeToRead={timeToRead}
+              title={title}
+              description={description}
+            />
+          )
+        )}
+      </S.ListWrapper>
 
 <Pagination
         isFirst={isFirst}
