@@ -8,6 +8,7 @@ import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
 
 import * as S from "./styled"
+import * as GA from './trackers'
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
@@ -39,11 +40,20 @@ const MenuBar = () => {
       </S.MenuBarGroup>
       <S.MenuBarGroup>
         <S.MenuBarItem
-          title="Mudar o tema"
+          title="Mudar o Tema"
           onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
+
+            if (window.DISQUS !== undefined) {
+              window.setTimeout(() => {
+                window.DISQUS.reset({
+                  reload: true
+                })
+              }, 300)
+            }
           }}
           className={theme}
+          isDarkMode={isDarkMode}
         >
           <Light />
         </S.MenuBarItem>
@@ -56,16 +66,18 @@ const MenuBar = () => {
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
         <S.MenuBarItem 
-        title="Ir para o Topo" className='scroll' 
-        onClick={ () => { 
-          this.scrollToTop();
-           }}
-           >
+          title="Ir para o Topo"
+          onClick={() => {
+            GA.topClickTrack()
+            window.scroll({ top: 0, behavior: 'smooth' })
+          }}
+        >
           <Arrow />
         </S.MenuBarItem>
         </S.MenuBarGroup>
     </S.MenuBarWrapper>
   )
 }
+
 
 export default MenuBar
