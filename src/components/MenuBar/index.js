@@ -6,7 +6,11 @@ import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb as Light } from "@styled-icons/octicons/LightBulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
+<<<<<<< HEAD
 
+=======
+import { Menu } from '@styled-icons/boxicons-regular/Menu'
+>>>>>>> 8297952de19dc06446fb65eb99eec6d32d734202
 
 import * as S from "./styled"
 import * as GA from './trackers'
@@ -44,6 +48,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
+<<<<<<< HEAD
 
         <S.MenuBarGroupMobile>
         <S.MenuBarGroup>
@@ -53,6 +58,8 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         </S.MenuBarGroup>
       </S.MenuBarGroupMobile>
       
+=======
+>>>>>>> 8297952de19dc06446fb65eb99eec6d32d734202
       <S.MenuBarGroup>
         <S.MenuBarItem
           title="Mudar o Tema"
@@ -72,8 +79,12 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         >
           <Light />
         </S.MenuBarItem>
+<<<<<<< HEAD
 
       <S.MenuBarItem
+=======
+        <S.MenuBarItem
+>>>>>>> 8297952de19dc06446fb65eb99eec6d32d734202
           title="Mudar visualização"
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
@@ -81,8 +92,12 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
+<<<<<<< HEAD
 
       <S.MenuBarItem 
+=======
+        <S.MenuBarItem 
+>>>>>>> 8297952de19dc06446fb65eb99eec6d32d734202
           title="Ir para o Topo"
           onClick={() => {
             GA.topClickTrack()
@@ -92,6 +107,17 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
           <Arrow />
         </S.MenuBarItem>
         </S.MenuBarGroup>
+<<<<<<< HEAD
+=======
+
+        <S.MenuBarGroupMobile>
+        <S.MenuBarGroup>
+          <S.MenuBarItem title="Abrir Menu" onClick={openMenu}>
+            <Menu />
+          </S.MenuBarItem>
+        </S.MenuBarGroup>
+      </S.MenuBarGroupMobile>
+>>>>>>> 8297952de19dc06446fb65eb99eec6d32d734202
     </S.MenuBarWrapper>
   )
 }
