@@ -66,8 +66,8 @@ GraphQL fornece uma descrição completa e compreensível dos dados em sua API, 
 
 
 ## Oque é Algolia ?
-- " Algolia é um mecanismo de pesquisa hospedado, que oferece pesquisa em texto completo, numérica e facetada, capaz de fornecer resultados em tempo real desde o primeiro toque de tecla. A poderosa API do Algolia permite que você implemente de forma rápida e perfeita a pesquisa em seus sites e aplicativos móveis.
-Nossa API de pesquisa alimenta bilhões de consultas para milhares de empresas todos os meses, entregando resultados relevantes em menos de 100 ms em qualquer lugar do mundo."
+- Algolia é um mecanismo de pesquisa hospedado, que oferece pesquisa em texto completo, numérica e facetada, capaz de fornecer resultados em tempo real desde o primeiro toque de tecla. A poderosa API do Algolia permite que você implemente de forma rápida e perfeita a pesquisa em seus sites e aplicativos móveis.
+Nossa API de pesquisa alimenta bilhões de consultas para milhares de empresas todos os meses, entregando resultados relevantes em menos de 100 ms em qualquer lugar do mundo.
 https://www.algolia.com/doc/
 instalação : https://www.algolia.com/doc/guides/building-search-ui/installation/react/
 
@@ -131,7 +131,7 @@ Importando rect GA
 ```JSX
 import * as GA from './trackers'
 ```
-exemplo de onde usei no meu projeto :
+exemplo de onde usei no Blog :
 ```JSX
           title="Ir para o Topo"
           onClick={() => {
@@ -145,7 +145,7 @@ https://github.com/react-ga/react-ga
 - Pois é usei o GA inicialmente apenas para fazer a seta do menu do blog ter a função de rolar a página ao topo.
 - Mas falar sobre Google Analytics vai ser em um próximo post.
 - Inicialmente tentei usar a função " scrollTO "  gatsby-plugin-smoothscroll , https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/
-mas essa função é instavel e inoperante no meu caso .
+mas essa função de ir ao topo da pagina é instavel e inoperante no meu caso então usei o GA.
 
 
 #### Links com todas documentações de toda stack utilizada

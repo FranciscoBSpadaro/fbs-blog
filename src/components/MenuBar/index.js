@@ -6,11 +6,12 @@ import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb as Light } from "@styled-icons/octicons/LightBulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
+import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
 import * as S from "./styled"
 import * as GA from './trackers'
 
-const MenuBar = () => {
+const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
@@ -23,6 +24,11 @@ const MenuBar = () => {
     window.__onThemeChange = () => setTheme(window.__theme)
     window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
+
+  const openMenu = () => {
+    GA.menuTracker()
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <S.MenuBarWrapper>
@@ -75,6 +81,14 @@ const MenuBar = () => {
           <Arrow />
         </S.MenuBarItem>
         </S.MenuBarGroup>
+
+        <S.MenuBarGroupMobile>
+        <S.MenuBarGroup>
+          <S.MenuBarItem title="Abrir Menu" onClick={openMenu}>
+            <Menu />
+          </S.MenuBarItem>
+        </S.MenuBarGroup>
+      </S.MenuBarGroupMobile>
     </S.MenuBarWrapper>
   )
 }

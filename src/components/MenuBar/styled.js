@@ -45,6 +45,12 @@ export const MenuBarLink = styled(Link)`
     }
   }
 `
+export const MenuBarGroupMobile = styled.div`
+  display: none;
+  ${media.lessThan('large')`
+    display: block;
+  `}
+`
 
 export const MenuBarItem = styled.span`
   color: var(--texts);
