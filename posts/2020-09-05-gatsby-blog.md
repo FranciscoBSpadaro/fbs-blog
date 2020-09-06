@@ -11,13 +11,12 @@ background: "#bf58a9"
 -veja os plugins usados abaixo
 
 ```jsx
-  "dependencies": {
+"dependencies": {
     "dotenv": "^8.1.0",
     "gatsby": "^2.13.50",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-algolia-search": "^0.5.7",
     "gatsby-plugin-manifest": "^2.2.4",
-    "gatsby-plugin-netlify-cms": "^4.1.9",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-sharp": "^2.2.9",
@@ -39,11 +38,13 @@ background: "#bf58a9"
     "react": "^16.8.6",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.8.6",
+    "react-ga": "^3.1.2",
     "react-helmet": "^5.2.1",
     "react-instantsearch-dom": "^5.7.0",
     "styled-components": "^4.4.1",
     "styled-icons": "^10.19.0",
     "styled-media-query": "^2.1.2"
+  },
 ```
 ## Oque é Gatsby ? Graphql ? Algolia? Netlify ?
 ![gatsbygitnet](/assets/img/gatsbygitnet.png)
@@ -110,13 +111,52 @@ Em 2015, o Facebook anunciou o módulo React Native, que em conjunto com o React
 Na pesquisa de 2018 sobre hábitos de desenvolvedores do site Stack Overflow, o React foi a terceira biblioteca ou framework mais citado pelos usuários e desenvolvedores profissionais, ficando atrás somente do Node.js e Angular, respectivamente.
 ![logoreac](/assets/img/logoreac.png)
 
+
+# Prism
+Prism é usadado para highlights , efeitos visuais nos textos markdown , ele da um plano de fundo diferenciado para os textos de programadores que usam blogs como eu e quer postar os codigos no blog
+O Prism é um realce de sintaxe leve e extensível, desenvolvido com os padrões da web modernos em mente.
+Ele é usado em milhares de sites, incluindo alguns daqueles que você visita diariamente.
+- https://prismjs.com/
+
+#### Light Mode , Dark Mode
+- https://markoskon.com/dark-mode-in-react/
+
+### React.GA
+Plugin
+```JSX
+"react-ga": "^3.1.2",
+
+```
+Importando rect GA
+```JSX
+import * as GA from './trackers'
+```
+exemplo de onde usei no meu projeto :
+```JSX
+          title="Ir para o Topo"
+          onClick={() => {
+            GA.topClickTrack()
+            window.scroll({ top: 0, behavior: 'smooth' })
+          }}
+        >
+```
+- React GA , Google Analytics
+https://github.com/react-ga/react-ga
+- Pois é usei o GA inicialmente apenas para fazer a seta do menu do blog ter a função de rolar a página ao topo.
+- Mas falar sobre Google Analytics vai ser em um próximo post.
+- Inicialmente tentei usar a função " scrollTO "  gatsby-plugin-smoothscroll , https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/
+mas essa função é instavel e inoperante no meu caso .
+
+
 #### Links com todas documentações de toda stack utilizada
 - Styled Components:    https://styled-components.com/
 - Styled Icons:  https://styled-icons.js.org/
 - https://styled-components.com/docs/basics
 - Markdown Para postagens : https://guides.github.com/features/mastering-markdown/  
   https://daringfireball.net/projects/markdown/
-#### Toda documentação do gatsby:
+
+#### Toda documentação do gatsby utilizada nesse blog:
+
 - https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
 - https://www.gatsbyjs.com/docs/node-apis/#onCreateNode
 - https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/
@@ -135,17 +175,9 @@ Na pesquisa de 2018 sobre hábitos de desenvolvedores do site Stack Overflow, o 
 - https://www.gatsbyjs.com/plugins/gatsby-plugin-algolia-search/
 - https://www.gatsbyjs.com/docs/custom-html/
 
-# Prism
-Prism é usadado para highlights , efeitos visuais nos textos markdown , ele da um plano de fundo diferenciado para os textos de programadores que usam blogs como eu e quer postar os codigos no blog
-O Prism é um realce de sintaxe leve e extensível, desenvolvido com os padrões da web modernos em mente.
-Ele é usado em milhares de sites, incluindo alguns daqueles que você visita diariamente.
-- https://prismjs.com/
-
-#### Light Mode , Dark Mode
-- https://markoskon.com/dark-mode-in-react/
 
 ----------------------
-obs : nesse projeto nao usei Contentful , em outros posts irei falar sobre ele .
+obs : nesse projeto não usei Contentful , será um tema para outro post .
 
 [Sobre Mim](/about)
 
