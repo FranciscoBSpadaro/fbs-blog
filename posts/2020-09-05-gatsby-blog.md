@@ -4,6 +4,7 @@ title: Blog Feito com Gatsby
 description: esse é um blog desenvolvido com gatsby 100% javascript.
 category: JS
 background: "#bf58a9"
+image: "/assets/img/gatsbygitnet.png"
 ---
 
 # Esse é um blog PWA Com React, Graphql e Netlify , Algolia , Disqus
