@@ -8,6 +8,8 @@ import { ThList as List } from "@styled-icons/typicons/ThList"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
+import getThemeColor from "../../utils/getThemeColor"
+
 import * as S from "./styled"
 import * as GA from './trackers'
 
@@ -36,12 +38,26 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink to="/" title="Voltar para Home">
+      <S.MenuBarLink
+          to="/"
+          fade
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          title="Voltar para Home"
+        >
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink to="/search/" title="Pesquisar">
+        <S.MenuBarLink
+          to="/search/"
+          fade
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          title="Pesquisar"
+        >
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>

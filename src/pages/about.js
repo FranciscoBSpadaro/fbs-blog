@@ -15,7 +15,7 @@ const AboutPage = () => (
 </S.PostHeader>
   <S.MainContent>
   <h1>Sobre mim</h1>
-<h1><img src={catsGIF} width="250" height="250" alt="funcionarios" ></img></h1>
+<h2><img src={catsGIF} width="250" height="250" alt="funcionarios" ></img></h2>
 <p>Olá muito prazer, me chamo Francisco Bianchi Spadaro.<span role="img" aria-label="handet">🖖🏽</span>
 <br/> Estou cursando Análise e Desenvolvimento de Sistemas pela faculdade Anhanguera e estou nos cursos de Programação oferecidos por  Dev Samurai, Rockeseat, udemy, etc.
 <br/> Meu foco é dominar o JavaScript e com isso dominar o ReactJs, React Native e NodeJs, e tambem atuar como DevOps nas plataformas AWS 'Amazon Web Services '  e IBM CLOUD.
@@ -27,7 +27,7 @@ const AboutPage = () => (
 <br/> <span role="img" aria-label="sound">🎵</span> <span role="img" aria-label="tree">🎄</span>  Atividades: Curto praia , natureza , músicas e filmes/seriados em geral.
 <br/> Mas oque eu mais faço é estudar , estou totalmente engajado e focado nisso 
 <br/> <span role="img" aria-label="ipod">📟</span>  Entre em contato comigo Click no logotipo abaixo</p> 
-<Link to="https://fbsdev.netlify.app/"> <img src={fbsdevPNG} alt="FBS-DEV"></img> </Link>
+<h2><Link to="https://fbsdev.netlify.app/"> <img src={fbsdevPNG} alt="FBS-DEV"></img> </Link></h2>
 </S.MainContent>   
   </Layout>
 

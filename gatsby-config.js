@@ -3,12 +3,13 @@ const queries = require("./src/utils/algolia_queries")
 module.exports = {
   siteMetadata: {
     title: `Francisco Bianchi Spadaro`,
-    description: `Blog com meus projetos,Novidades Tecnologicas,DevOps e Serviços`,
     position:`©FBS-DEV`,
+    description: `Blog com meus projetos,Novidades Tecnologicas,DevOps e Serviços`,
     author:`@franciscobspadaro`,
     siteUrl:`https://fbs-blog.netlify.app/`
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
         // o static needs to be the first to work with gatsby-remark-images
