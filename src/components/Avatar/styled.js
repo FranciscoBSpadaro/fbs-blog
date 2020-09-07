@@ -4,12 +4,12 @@ import media from "styled-media-query"
 
 export const AvatarWrapper = styled(Img)`
   border-radius: 50%;
-  height: 3.75rem;
+  height: 4.75rem;
   margin: auto;
-  width: 3.75rem;
+  width: 4.75rem;
 
   ${media.lessThan("large")`
-    height: 1.875rem;
-    width: 1.875rem;
+    height: 2.875rem;
+    width: 2.875rem;
   `}
 `

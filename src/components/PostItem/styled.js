@@ -20,7 +20,7 @@ export const PostItemWrapper = styled.section`
   align-items: center;
   border-bottom: 1px solid var(--borders);
   display: flex;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   width: 100%;
 
   body#grid & {
@@ -47,8 +47,8 @@ export const PostItemTag = styled.div`
   font-size: 1.3rem;
   font-weight: 700;
   justify-content: center;
-  min-height: 90px;
-  min-width: 90px;
+  min-height: 80px;
+  min-width: 80px;
   text-transform: uppercase;
 
   ${media.lessThan("large")`

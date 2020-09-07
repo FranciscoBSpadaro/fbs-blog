@@ -77,7 +77,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     
-const postsPerPage = 6                                           // cada pagina com 6 posts
+const postsPerPage = 7                                           // cada pagina com 6 posts
     const numPages = Math.ceil(posts.length / postsPerPage)   // Math.ceil arredonda o numero para inteiro,ex 10post.length / 6 = 1.6 o ceil converte para = 2 = pag2 
 
     Array.from({ length: numPages }).forEach((_, index) => {   // cria array com numero de paginas , e para cada pagina vai ser um index no array
