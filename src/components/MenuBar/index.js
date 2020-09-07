@@ -4,7 +4,8 @@ import { Home } from "@styled-icons/boxicons-solid/Home"
 import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
 import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb as Light } from "@styled-icons/octicons/LightBulb"
-
+import { ThList as List } from "@styled-icons/typicons/ThList"
+import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
 import * as S from "./styled"
@@ -12,13 +13,18 @@ import * as GA from './trackers'
 
 const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
+    
 
   }, [])
 
@@ -50,6 +56,18 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         </S.MenuBarGroup>
       </S.MenuBarGroupMobile>
       
+      <S.MenuBarGridMobile>
+      <S.MenuBarItem
+          title="Mudar visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+          }}
+        >
+          {isListMode ? <Grid /> : <List />}
+          </S.MenuBarItem>
+          </S.MenuBarGridMobile>
+        
+
       <S.MenuBarGroup>
         <S.MenuBarItem
           title="Mudar o Tema"

@@ -60,6 +60,7 @@ export const MenuBarItem = styled.span`
   padding: 1.1rem;
   position: relative;
   width: 3.75rem;
+  
 
   &.light {
     color: #d4d400;
@@ -90,5 +91,12 @@ export const MenuBarItem = styled.span`
     padding: .9rem;
     position: relative;
     width: 3.2rem;
+  `}
+`
+
+export const MenuBarGridMobile = styled.div`
+  display: none;
+  ${media.greaterThan('large')`
+    display: block;
   `}
 `
