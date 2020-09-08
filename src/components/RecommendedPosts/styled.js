@@ -11,12 +11,10 @@ export const RecommendedWrapper = styled.section`
 
 export const RecommendedLink = styled(AniLink)`
   align-items: center;
-  background: var(--mediumBackground);
   color: var(--highlight);
   display: flex;
   padding: 3rem;
   text-decoration: none;
-  transition: background 0.5s;
   width: 50%;
 
   ${media.lessThan("large")`

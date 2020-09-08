@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Avatar from '../Avatar'
 import * as S from './styled'
 
-import getThemeColor from '../../utils/getThemeColor'
+
 
 const Profile = ({ title, position, description, isMobileHeader }) => {
   return (
@@ -12,9 +12,17 @@ const Profile = ({ title, position, description, isMobileHeader }) => {
       <S.ProfileLink
         to="/"
         cover
+        duration={3}
         direction="left"
-        bg={getThemeColor()}
-        duration={0.6}
+        bg="
+        url(https://source.unsplash.com/random)
+        center / cover /* position / size */
+        no-repeat                /* repeat */
+        fixed                    /* attachment */
+        padding-box              /* origin */
+        content-box              /* clip */
+        white                     /* color */
+        "
       >
         <Avatar />
         <S.ProfileAuthor>

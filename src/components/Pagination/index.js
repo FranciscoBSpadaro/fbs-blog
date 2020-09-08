@@ -2,7 +2,6 @@ import React from "react"
 import propTypes from "prop-types"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
                                                                        // se nao for a primeira pagina entao mostre o link , bool = boleano
@@ -20,8 +19,16 @@ const Pagination = ({
       to={prevPage}
       cover
       direction="left"
-      bg={getThemeColor()}
-      duration={0.6}
+      duration={3}
+      bg="
+      url(https://source.unsplash.com/random)
+      center / cover /* position / size */
+      no-repeat                /* repeat */
+      fixed                    /* attachment */
+      padding-box              /* origin */
+      content-box              /* clip */
+      white                     /* color */
+      "
     >
         ← página anterior
       </AniLink>
@@ -34,9 +41,17 @@ const Pagination = ({
         to={nextPage}
         cover
         direction="right"
-        bg={getThemeColor()}
-        duration={0.6}
-      >
+        duration={3}
+        bg="
+        url(https://source.unsplash.com/random)
+        center / cover /* position / size */
+        no-repeat                /* repeat */
+        fixed                    /* attachment */
+        padding-box              /* origin */
+        content-box              /* clip */
+        white                     /* color */
+        "
+        >
         proxima página →
       </AniLink>
     )}

@@ -3,7 +3,7 @@ const getThemeColor = () => {
     const theme = typeof window !== "undefined" && window.__theme
   
     if (theme === "light") return "#fff"
-    if (theme === "dark") return "#2e3136"
+    if (theme === "dark") return "#231336"
   }
   
   export default getThemeColor
