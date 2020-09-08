@@ -18,18 +18,8 @@ const Pagination = ({
       <AniLink
       to={prevPage}
       cover
-      direction="left"
       duration={3}
-      bg="
-      url(https://source.unsplash.com/random)
-      center / cover /* position / size */
-      no-repeat                /* repeat */
-      fixed                    /* attachment */
-      padding-box              /* origin */
-      content-box              /* clip */
-      white                     /* color */
-      "
-    >
+      direction="left">
         ← página anterior
       </AniLink>
     )}        
@@ -40,18 +30,8 @@ const Pagination = ({
       <AniLink
         to={nextPage}
         cover
-        direction="right"
         duration={3}
-        bg="
-        url(https://source.unsplash.com/random)
-        center / cover /* position / size */
-        no-repeat                /* repeat */
-        fixed                    /* attachment */
-        padding-box              /* origin */
-        content-box              /* clip */
-        white                     /* color */
-        "
-        >
+        direction="right">
         proxima página →
       </AniLink>
     )}
