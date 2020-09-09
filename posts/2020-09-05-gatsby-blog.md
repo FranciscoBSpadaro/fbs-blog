@@ -3,7 +3,7 @@ date: 2020-09-05 01:00:23
 title: Blog Feito com Gatsby
 description: esse é um blog desenvolvido com gatsby 100% javascript.
 category: JS
-background: "#bf58a9"
+background: "#fcca03"
 image: "/assets/img/gatsbygitnet.png"
 ---
 
