@@ -15,9 +15,9 @@ const Profile = ({ title, position, description, isMobileHeader }) => {
         duration={3}
         direction="left"
         bg="
-        url(https://source.unsplash.com/800x600/?programming)
+        url(https://source.unsplash.com/700x600/?programming)
         center / cover /* position / size */
-        no-repeat                /* no-repeat */
+        no-repeat                /* repeat */
         fixed                    /* attachment */
         padding-box              /* origin */
         content-box              /* clip */
