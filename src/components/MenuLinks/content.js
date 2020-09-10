@@ -9,7 +9,7 @@ const links = [
     },
     {
         label: "Portfólio",
-        url: "https://fbsdev.netlify.app/",
+        url: "https://fbs-dev.online/",
       },
   ]
   

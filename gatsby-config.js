@@ -6,7 +6,7 @@ module.exports = {
     position:`©FBS-DEV`,
     description: `Blog com meus projetos,Novidades Tecnologicas,DevOps e Serviços`,
     author:`@franciscobspadaro`,
-    siteUrl:`https://fbs-blog.netlify.app/`
+    siteUrl:`https://fbs-dev.online/`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
