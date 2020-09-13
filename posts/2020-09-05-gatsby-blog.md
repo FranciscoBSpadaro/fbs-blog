@@ -87,8 +87,34 @@ GraphQL fornece uma descrição completa e compreensível dos dados em sua API, 
    Gerenciamento de conteúdo de código aberto para seu fluxo de trabalho Git , Use o Netlify CMS com qualquer gerador de site estático para um projeto da web mais rápido e flexível.  Obtenha a velocidade, segurança e escalabilidade de um site estático, enquanto ainda fornece uma interface de edição conveniente para o conteúdo . O conteúdo é armazenado em seu repositório Git junto com seu código para facilitar o controle de versão, publicação multicanal e a opção de lidar com atualizações de conteúdo diretamente no Git.Um CMS extensível baseado no React . O Netlify CMS foi desenvolvido como um aplicativo React de página única.
    Crie visualizações com estilo personalizado, widgets de IU e plug-ins de editor ou adicione back-ends para oferecer suporte a diferentes APIs da plataforma Git.
 
-* https://www.netlifycms.org/
 * https://app.netlify.com/ 
+
+
+
+# Netlyfi cms
+
+## Gerenciamento de conteúdo de código aberto para seu fluxo de trabalho Git
+
+### O que é CMS (Content Management System)?
+
+Sigla muito utilizada por desenvolvedores de websites e portais na internet, o [CMS](https://canaltech.com.br/software/O-que-e-um-CMS/) (Content Management System) é um conjunto de funções utilizadas para facilitar a vida dos criadores de sites. Embora o nome pareça referenciar a uma única e exclusiva ferramenta, como é o caso das IDEs (Integrated Development Environment), esses Sistemas de Gestão de Conteúdo (SGC) são o conjunto de ferramentas para criação/edição de conteúdo na internet sem a necessidade de conhecimentos de programação.
+
+Um dos frameworks mais conhecidos e utilizados no Brasil e no mundo é o **Wordpress**, desenvolvido na linguagem de programação PHP, que permite que qualquer usuário com conhecimento básico ou médio de computação possa criar websites completos e bastante fáceis de se manter, com um conteúdo interativo. Antes dos CMS, apenas pessoas com conhecimento avançado de programação web eram capazes de colocar e manter conteúdo no ar.
+
+#### **Netlyfi cms melhor e mais pratico que Wordpress**
+
+* ##### Gerenciamento estático + conteúdo = ♥
+* ##### O conteúdo é armazenado em seu repositório Git junto com seu código para facilitar o controle de versão, publicação em vários canais e a opção de lidar com atualizações de conteúdo diretamente no Git.
+
+  ##### Um CMS extensível baseado no React
+
+  ##### O Netlify CMS foi desenvolvido como um aplicativo React de página única
+
+  ##### Crie visualizações com estilo personalizado, widgets de IU e plug-ins de editor ou adicione back-ends para oferecer suporte a diferentes APIs da plataforma Git.
+
+**https://www.netlifycms.org/**
+
+
 
 ## Oque é Disqus
 
@@ -169,33 +195,6 @@ exemplo de onde usei no Blog :
 * Mas falar sobre Google Analytics vai ser em um próximo post.
 * Inicialmente tentei usar a função " scrollTO "  gatsby-plugin-smoothscroll , https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/
   mas essa função de ir ao topo da pagina é instavel e inoperante no meu caso então usei o GA.
-
-
-
-# Netlyfi cms
-
-## Gerenciamento de conteúdo de código aberto para seu fluxo de trabalho Git
-
-### O que é CMS (Content Management System)?
-
-Sigla muito utilizada por desenvolvedores de websites e portais na internet, o [CMS](https://canaltech.com.br/software/O-que-e-um-CMS/) (Content Management System) é um conjunto de funções utilizadas para facilitar a vida dos criadores de sites. Embora o nome pareça referenciar a uma única e exclusiva ferramenta, como é o caso das IDEs (Integrated Development Environment), esses Sistemas de Gestão de Conteúdo (SGC) são o conjunto de ferramentas para criação/edição de conteúdo na internet sem a necessidade de conhecimentos de programação.
-
-Um dos frameworks mais conhecidos e utilizados no Brasil e no mundo é o **Wordpress**, desenvolvido na linguagem de programação PHP, que permite que qualquer usuário com conhecimento básico ou médio de computação possa criar websites completos e bastante fáceis de se manter, com um conteúdo interativo. Antes dos CMS, apenas pessoas com conhecimento avançado de programação web eram capazes de colocar e manter conteúdo no ar.
-
-> #### **Netlyfi cms melhor e mais pratico que Wordpress**
-
-* ##### Gerenciamento estático + conteúdo = ♥
-* ##### O conteúdo é armazenado em seu repositório Git junto com seu código para facilitar o controle de versão, publicação em vários canais e a opção de lidar com atualizações de conteúdo diretamente no Git.
-
-  * ##### Um CMS extensível baseado no React
-  * ##### O Netlify CMS foi desenvolvido como um aplicativo React de página única
-  * ##### Crie visualizações com estilo personalizado, widgets de IU e plug-ins de editor ou adicione back-ends para oferecer suporte a diferentes APIs da plataforma Git.
-
-**https://www.netlifycms.org/**
-
-
-
-
 
 #### Links com todas documentações de toda stack utilizada
 
