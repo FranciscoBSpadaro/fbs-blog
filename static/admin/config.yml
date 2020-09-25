@@ -25,7 +25,7 @@ collections:
           widget: 'datetime',
           format: 'YYYY-MM-DD hh:mm:ss',
         }
-      - { label: 'Post Image', name: 'image', widget: 'image' }
+
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - {
@@ -51,10 +51,5 @@ collections:
             ],
         }
       - { label: 'Tags', name: 'tags', widget: 'list', default: [''] }
-      - {
-          label: 'Category',
-          name: 'categories',
-          widget: 'list',
-          required: false,
-        }
+
       - { label: 'Body', name: 'body', widget: 'markdown' }
