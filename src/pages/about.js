@@ -27,7 +27,7 @@ const AboutPage = () => (
 <br/> <span role="img" aria-label="sound">🎵</span> <span role="img" aria-label="tree">🎄</span>  Atividades: Curto praia , natureza , músicas e filmes/seriados em geral.
 <br/> Mas oque eu mais faço é estudar , estou totalmente engajado e focado nisso.
 <br/> Sou questionador e de mente empreendedora , não gosto de comodismo e sempre quero mudar e evoluir para o melhor.
-<br/> Busco me preparar para a terceira revolução industrial.
+<br/> Busco me preparar para a Quarta Revolução industrial.
 <br/> <span role="img" aria-label="ipod">📟</span>  Entre em contato comigo Click no logotipo abaixo</p> 
 <h2><Link to="https://fbsdev.netlify.app/"> <img src={fbsdevPNG} alt="FBS-DEV"></img> </Link></h2>
 </S.MainContent>   
