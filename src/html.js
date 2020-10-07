@@ -9,6 +9,7 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="google-site-verification" content="7xA9HtMjERVmdL7xFiLO-7adCV4a6Mbl0MNYwLylD6I" />
+        <meta property="og:image" content="/static/assets/fbs-logo.png"/>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes} className="dark">
