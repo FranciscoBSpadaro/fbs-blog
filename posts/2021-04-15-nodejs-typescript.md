@@ -103,7 +103,7 @@ O `package.json` é um arquivo de configuração utilizado para estipular e conf
 yarn add -D typescript sucrase
 ```
 
-toda linha de comando com o -D  significa uma dependencia de Developer ou apenas modo de desenvolvimento. módulos que nao vão ser usados em produção
+toda linha de comando com o -D  significa uma dependência de Developer ou apenas modo de desenvolvimento. módulos que não vão ser usados em produção
 
 2 - criar a pasta src ' source ' do projeto com o nome index.js para começar a fazer os teste
 
@@ -114,24 +114,20 @@ mkdir src
 touch src/index.ts
 ```
 
-
-
 no arquivo index colocar o código abaixo  para teste , obs ao salvar esse código o eslint iria converter ele para um código mais limpo. mas ainda não configuramos o eslint. depois veremos como vai ficar o código toda vez que salvar um arquivo e o eslint corrigir automaticamente 
 
 ![](/assets/img/vs3.jpg)
-
-
 
 agora abrir o arquivo package.json e criar o script para execução do código .
 
 ![](/assets/img/vscd1.jpg)
 
-adicionando essa linha de scripts com o nome de "dev" e build ' ja podemos executar o comando
+adicionando essa linha de scripts com o nome de "dev" e build ' já podemos executar o comando abaixo
 
 yarn dev
 
 ![](/assets/img/vsss2.jpg)
 
-
-
 se apareceu o numero 5 no terminal tudo certo até aqui !!
+
+podemos observar que utilizando o sucrase o código executou bem rápido
