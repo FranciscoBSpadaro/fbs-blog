@@ -26,6 +26,11 @@ Ele se concentra na compilação de extensões da linguagem não-padrão, como J
 
 O Sucrase visa o desenvolvimento de builds. Obtém ganhos de velocidade significativos provenientes de uma redução no escopo dos objetivos do compilador.
 
+**Prettier -** <https://prettier.io/>
+
+* ESLint: Responsável por identificar padrões de código em desacordo com as regras pré-estabelecidas.
+* Prettier: Responsável por formatar o código de acordo com essas regras.
+
 **Eslint -** <https://eslint.org/>
 
 O ESLint analisa estaticamente seu código para encontrar problemas rapidamente. ESLint é integrado à maioria dos editores de texto e você pode executar o ESLint como parte de seu pipeline de integração contínua.
@@ -57,3 +62,11 @@ CORS é um pacote node.js para fornecer um middleware Connect / Express que pode
 **Insomnia -**  <https://insomnia.rest/download>
 
 Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento de especificações conduzidas por pipelines de CI / CD APIOps.
+
+
+
+### Parte 2 - Iniciando o Projeto
+
+esse app consiste em se comunicar com o banco de dados mongodb instalado no **docker** utilizando o **Insomnia**  para enviar metodos GET/POST no formato json para inserir as informações no banco de dados.
+
+o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier .
