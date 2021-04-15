@@ -89,13 +89,13 @@ Antes de iniciar lembre de instalar o nodejs  , apenas baixe e instale
 
 Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
 
-1 - yarn init -y
+ yarn init -y
 
 criado o packge.json 
 
 O `package.json` é um arquivo de configuração utilizado para estipular e configurar dependências do seu projeto (quais outros pacotes ele vai precisar para ser executado) e scripts automatizados. Através dele conseguimos deixar claro uma "receita" para executar um projeto.
 
-2 - Abra o vscode e selecione a pasta do projeto , abra o terminal e instale a primeira dependência . 
+ Abra o vscode e selecione a pasta do projeto , abra o terminal e instale a primeira dependência . 
 
 ![](/assets/img/vs1.jpg "yarn add -D typescript sucrase")
 
@@ -105,7 +105,7 @@ yarn add -D typescript sucrase
 
 toda linha de comando com o -D  significa uma dependência de Developer ou apenas modo de desenvolvimento. módulos que não vão ser usados em produção
 
-2 - criar a pasta src ' source ' do projeto com o nome index.js para começar a fazer os teste
+ criar a pasta src ' source ' do projeto com o nome index.js para começar a fazer os teste
 
 ![](/assets/img/vs2.jpg "mkdir src")
 
@@ -142,27 +142,11 @@ apos instalado criar um arquivo na pasta principal como o nome nodemon.json
 
 com esses parametros 
 
-<!--StartFragment-->
-
-|     |                                    |
-| --- | ---------------------------------- |
-| {   |                                    |
-|     | "watch": \["src"],                 |
-|     | "ext": "ts",                       |
-|     | "execMap": {                       |
-|     | "ts": "sucrase-node src/server.ts" |
-|     | }                                  |
-|     | }                                  |
-
-<!--EndFragment-->
-
 watch é a pasta onde o nodemon vai monitorar
 
 ext é a extensão a ser monitorada no caso ts é typescript , todo aquivo ts é monitorado suas modificações
 
 execmap  ele define quando um arquivo da extensao ts for atualizado qual script ira rodar.
-
-
 
 ![](/assets/img/nodemoncfg.jpg "nodemon cfg")
 
@@ -170,20 +154,73 @@ mude o nome do arquivo index.ts para server.ts
 
 já atualize também o arquivo package.json  o script dev para server.ts
 
-<!--StartFragment-->
+"scripts": {
 
-|              |                                                       |
-| ------------ | ----------------------------------------------------- |
-| "scripts": { |                                                       |
-|              | "dev": "nodemon src/server.ts",                       |
-|              | "build": "",                                          |
-|              | "test": "echo \"Error: no test specified\" && exit 1" |
-|              | },                                                    |
+"dev": "nodemon src/server.ts",   }
 
-<!--EndFragment-->
+já podemos também configurar o build caso futuramente queira testar o build
 
-agora podemos testar o nodemon executando novamente yarn dev 
+"build": "sucrase ./src -d ./dist --transforms typescript,imports"     obs no github do sucrase podemos ver os transforms que ele dispõe ,   nesse caso ele transforma o typescript para javascript e importar o código na pasta dist onde vai ter o código javascript de todo o projeto  -d significa diretório
+
+agora podemos testar o nodemon executando novamente yarn dev  , pode executar também yarn build para ver a pasta dist ser criada com o código convertido para js.
 
 ![](/assets/img/nodemon2.jpg)
 
 dessa forma o nodemon já está em funcionamento.
+
+agora vamos configurar o eslint .
+
+abra o terminal pelo vscode na pasta do projeto e execute 
+
+**yarn add -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin**
+
+após concluir a instalação executar o comando de configuração inicial
+
+**yarn eslint --init**
+
+no console vai abrir perguntas de configuração inicial.
+
+usar essa opções :
+
+\* To check syntax, find problems, and enforce code style
+
+\* Javascript modules (import/export)
+
+\* None of These
+
+\* agora usando espaço desmarque browser e marque node e de enter
+
+\* Use a Popular Style Guide
+
+\* Standard
+
+\* Javascript
+
+selecionada essa opçao vai iniciar a instalação
+
+**Importante** o eslint está usando o npm para instalar e não o yarn , sendo assim ao concluir a instalação excluir o arquivo package.lock.json e rodar um ' yarn ' para captar as novas dependências que foi para um json do npm.
+
+foi criado um arquivo .eslintrc.js ele deve estar configurado da maneira conforme o print :
+
+![](/assets/img/eslintcfg.jpg "eslint")
+
+```javascript
+module.exports = {
+  env: {
+    es2021: true,
+    node: true
+  },
+  extends: [
+    'standard',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module'
+  },
+  plugins: ['@typescript-eslint'],
+  rules: {}
+}
+
+```
