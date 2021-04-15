@@ -14,8 +14,6 @@ tags:
 
 ### Parte 1 - stack de módulos e ferramentas utilizadas
 
-
-
 **Nodejs -** <https://nodejs.org/en/>
 
 Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface, baseado no V8 interpretador de JavaScript em C++ do Google, mantido pela fundação Node.js em parceria com a Linux Foundation
@@ -65,6 +63,8 @@ se você não sabe nada de docker já recomendo assistir ao video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yb2udL9GG2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Docker é um conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional para entregar software em pacotes chamados contêineres. Os contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração.
+
 **Cors -** <https://www.npmjs.com/package/cors>
 
 CORS é um pacote node.js para fornecer um middleware Connect / Express que pode ser usado para habilitar CORS com várias opções.
@@ -72,8 +72,6 @@ CORS é um pacote node.js para fornecer um middleware Connect / Express que pode
 **Insomnia -**  <https://insomnia.rest/download>
 
 Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento de especificações conduzidas por pipelines de CI / CD APIOps.
-
-
 
 ### Parte 2 - Iniciando o Projeto
 
