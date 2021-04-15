@@ -130,4 +130,10 @@ yarn dev
 
 se apareceu o numero 5 no terminal tudo certo até aqui !!
 
-podemos observar que utilizando o sucrase o código executou bem rápido
+podemos observar que utilizando o sucrase o código executou bem rápido .
+
+Agora vamos instalar o nodemon para iniciar o monitoramento automático do projeto 
+
+![](/assets/img/nodemon.jpg "Nodemon")
+
+yarn add -D nodemon
