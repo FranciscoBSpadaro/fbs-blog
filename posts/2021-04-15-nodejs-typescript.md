@@ -8,7 +8,7 @@ color: "#D6BA32"
 tags:
   - Nodejs
 ---
-# Projeto de um mini app para aprendizado
+#  Projeto de um simples app para aprendizado
 
 ## Esse é um tutorial de passo a passo explicando como desenvolvi meu primeiro projeto de estudo com nodejs e typescript.
 
@@ -229,3 +229,40 @@ agora se já nao tiver instalado instale a extensão do eslint no vscode
 após instalado clique no ícone de engrenagem e selecione a opção extension Settings
 
 ![](/assets/img/es1.jpg "eslint 1")
+
+agora em edit settings.json
+
+![](/assets/img/es2.jpg "eslint 2")
+
+
+
+editar o arquivo json ele deverá ficar igual ao da imagem para o funcionamento desejado 
+
+![](/assets/img/es3.jpg "eslint 3")
+
+
+
+```json
+    "workbench.editor.enablePreview": false,
+    "eslint.packageManager": "yarn",
+    "eslint.nodePath": "",
+    "eslint.trace.server": "messages",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+},
+"prettier.useEditorConfig": false,
+"prettier.requireConfig": true,
+"workbench.iconTheme": "vscode-icons",
+"eslint.codeAction.showDocumentation": {
+    
+    "enable": true
+}
+}
+```
