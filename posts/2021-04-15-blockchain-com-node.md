@@ -41,3 +41,17 @@ class Block{
         this.data = data;
     }
 ```
+
+Com a sintaxe this agente consegue instanciar os objetos da classe construtora .
+
+Agora devemos converter a classe orientada objetos para string para podemos debugar o codigo ou receber os logs para avaliar o funcionamento do código
+
+```javascript
+    toString(){
+        return `Block =
+                Timestamp = ${this.timestamp}
+                lastHash = ${this.lastHash.substring(0, 10)}
+                hash = ${this.hash.substring(0,10)}
+                data = ${this.data}`;
+    }
+```
