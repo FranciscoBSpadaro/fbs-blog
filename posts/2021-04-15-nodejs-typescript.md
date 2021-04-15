@@ -181,3 +181,9 @@ já atualize também o arquivo package.json  o script dev para server.ts
 |              | },                                                                  |
 
 <!--EndFragment-->
+
+agora podemos testar o nodemon executando novamente yarn dev 
+
+![](/assets/img/nodemon2.jpg)
+
+dessa forma o nodemon já está em funcionamento.
