@@ -3,8 +3,8 @@ layout: post
 date: 2021-04-15 03:22:57
 title: Nodejs + TypeScript
 description: TypeScript, Sucrase, ESLint, Express, MongoDB, Mongoose e outras ferramentas
-category: Nodejs
-color: "#D6BA32"
+category: Node
+color: "#EB7728"
 tags:
   - Nodejs
 ---
