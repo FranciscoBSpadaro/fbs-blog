@@ -172,13 +172,13 @@ já atualize também o arquivo package.json  o script dev para server.ts
 
 <!--StartFragment-->
 
-|              |                                                                     |
-| ------------ | ------------------------------------------------------------------- |
-| "scripts": { |                                                                     |
-|              | "dev": "nodemon src/server.ts",                                     |
-|              | "build": "sucrase ./src -d ./dist --transforms typescript,imports", |
-|              | "test": "echo \"Error: no test specified\" && exit 1"               |
-|              | },                                                                  |
+|              |                                                       |
+| ------------ | ----------------------------------------------------- |
+| "scripts": { |                                                       |
+|              | "dev": "nodemon src/server.ts",                       |
+|              | "build": "",                                          |
+|              | "test": "echo \"Error: no test specified\" && exit 1" |
+|              | },                                                    |
 
 <!--EndFragment-->
 
