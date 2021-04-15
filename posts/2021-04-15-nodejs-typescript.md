@@ -48,12 +48,7 @@ Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcio
 
 se você não sabe nada de docker já recomendo assistir ao video.
 
-<!-- blank line -->
-
-<figure class="video_container">
-  <iframe src="https://youtu.be/yb2udL9GG2U" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yb2udL9GG2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Cors -** <https://www.npmjs.com/package/cors>
 
