@@ -8,7 +8,7 @@ color: "#D6BA32"
 tags:
   - Nodejs
 ---
-# Projeto de um mini app para aprendizado
+#  Projeto de um simples app para aprendizado
 
 ## Esse é um tutorial de passo a passo explicando como desenvolvi meu primeiro projeto de estudo com nodejs e typescript.
 
@@ -63,7 +63,7 @@ Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcio
 
 **Docker -** <https://www.docker.com/>
 
-se você não sabe nada de docker já recomendo assistir ao video.
+se você não sabe nada de docker já recomendo assistir ao vídeo.
 
 <iframe width="760" height="415" src="https://www.youtube.com/embed/yb2udL9GG2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -81,13 +81,13 @@ Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento 
 
 esse app consiste em se comunicar com o banco de dados mongodb instalado no **docker** utilizando o **Insomnia**  para enviar metodos GET/POST no formato json para inserir as informações no banco de dados.
 
-o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier . 
+o projeto vai usar o Eslint que irar corrigir os erros de endentação no código junto com o prettier . 
 
 o sucrase ira converter o código typescript para javascript para o ambiente de produção / build 
 
 Antes de iniciar lembre de instalar o nodejs  , apenas baixe e instale
 
-Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
+Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependências do projeto
 
  yarn init -y
 
@@ -222,5 +222,71 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {}
 }
-
 ```
+
+agora se já nao tiver instalado instale a extensão do eslint no vscode
+
+após instalado clique no ícone de engrenagem e selecione a opção extension Settings
+
+![](/assets/img/es1.jpg "eslint 1")
+
+agora em edit settings.json
+
+![](/assets/img/es2.jpg "eslint 2")
+
+
+
+editar o arquivo json ele deverá ficar igual ao da imagem para o funcionamento desejado 
+
+![](/assets/img/es3.jpg "eslint 3")
+
+
+
+```json
+    "workbench.editor.enablePreview": false,
+    "eslint.packageManager": "yarn",
+    "eslint.nodePath": "",
+    "eslint.trace.server": "messages",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+},
+"prettier.useEditorConfig": false,
+"prettier.requireConfig": true,
+"workbench.iconTheme": "vscode-icons",
+"eslint.codeAction.showDocumentation": {
+    
+    "enable": true
+}
+}
+```
+
+esses são os parâmetros atuais para configurar o eslint , antigamente era necessário abrir os settings do vscode e usar outros parâmetros , com esses parâmetros ao salvar um arquivo ele vai corrigir automaticamente arquivos de javascript e typescripts  , quando abrir esse arquivo de configurações só vai ser necessário adicionar essas linhas
+
+"eslint.trace.server": "messages",
+
+"eslint.validate": [
+
+"javascript",
+
+"javascriptreact",
+
+"typescript",
+
+"typescriptreact"
+
+],
+
+"editor.codeActionsOnSave": {
+
+"source.fixAll.eslint": true
+
+},
+
+ao salvar essa configuração o eslint ja vai começar a apontar as correções
