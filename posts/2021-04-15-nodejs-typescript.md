@@ -22,6 +22,10 @@ Node.js é um software de código aberto, multiplataforma, que executa códigos 
 
 TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem. Anders Hejlsberg, arquiteto da linguagem C# e criador das linguagens Delphi e Turbo Pascal, trabalhou no desenvolvimento do TypeScript
 
+**Nodemon -** <https://www.npmjs.com/package/nodemon>
+
+Nodemon é uma ferramenta que ajuda a desenvolver aplicativos baseados em node.js, reiniciando automaticamente o aplicativo de nó quando mudanças de arquivo no diretório são detectadas. O nodemon não requer nenhuma mudança adicional em seu código ou método de desenvolvimento. Nodemon é um invólucro substituto para o nó. Para usar o nodemon, substitua a palavra node na linha de comando ao executar seu script.
+
 **Sucrase  -**  <https://github.com/alangpierce/sucrase>
 
 O Sucrase é uma alternativa ao Babel que permite um desenvolvimento muito rápido. O Sucrase assume que você está desenvolvendo em um navegador recente ou em uma versão recente do Node.js, acelerando a sua experiência em desenvolvimento.\
