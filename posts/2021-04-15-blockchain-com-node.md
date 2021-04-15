@@ -59,3 +59,34 @@ Agora devemos converter a classe orientada objetos para string para podemos debu
 com essa função acima é possível converter os objetos em Strings.
 
 o Hash possui 32 caracteres no código agente consegue limitar a exibição dos caracteres usando a sintaxe substring.  mas isso não é obrigatório , se apagar .substring(0,10) os logs vao exibir o hash completo.
+
+Agora temos que exportar esssa classe para poder executar um script de teste 
+
+```javascript
+module.exports = Block;
+```
+
+no momento o código deve ficar assim
+
+```javascript
+class Block{
+
+    constructor(timestamp, lastHash, hash, data){
+
+        this.timestamp = timestamp;
+        this.lastHash = lastHash;
+        this.hash = hash;
+        this.data = data;
+    }
+
+    toString(){
+        return `Block =
+                Timestamp = ${this.timestamp}
+                lastHash = ${this.lastHash.substring(0, 10)}
+                hash = ${this.hash.substring(0,10)}
+                data = ${this.data}`;
+    }
+}
+
+module.exports = Block;
+```
