@@ -222,5 +222,10 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {}
 }
-
 ```
+
+agora se já nao tiver instalado instale a extensão do eslint no vscode
+
+após instalado clique no ícone de engrenagem e selecione a opção extension Settings
+
+![](/assets/img/es1.jpg "eslint 1")
