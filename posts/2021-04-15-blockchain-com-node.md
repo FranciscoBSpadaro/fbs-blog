@@ -55,3 +55,5 @@ Agora devemos converter a classe orientada objetos para string para podemos debu
                 data = ${this.data}`;
     }
 ```
+
+com essa função acima é possível converter os objetos em Strings.
