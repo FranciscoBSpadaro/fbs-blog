@@ -69,4 +69,14 @@ Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento 
 
 esse app consiste em se comunicar com o banco de dados mongodb instalado no **docker** utilizando o **Insomnia**  para enviar metodos GET/POST no formato json para inserir as informações no banco de dados.
 
-o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier .
+o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier . 
+
+Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
+
+1 - yarn init -y
+
+criado o packge.json 
+
+O `package.json` é um arquivo de configuração utilizado para estipular e configurar dependências do seu projeto (quais outros pacotes ele vai precisar para ser executado) e scripts automatizados. Através dele conseguimos deixar claro uma "receita" para executar um projeto.
+
+2 -
