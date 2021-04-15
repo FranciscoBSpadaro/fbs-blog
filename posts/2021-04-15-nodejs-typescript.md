@@ -81,6 +81,8 @@ o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo 
 
 o sucrase ira converter o código typescript para javascript para o ambiente de produção / build 
 
+Antes de iniciar lembre de instalar o nodejs  , apenas baixe e instale
+
 Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
 
 1 - yarn init -y
@@ -107,3 +109,25 @@ toda linha de comando com o -D  significa uma dependencia de Developer ou apenas
 mkdir src
 touch src/index.ts
 ```
+
+
+
+no arquivo index colocar o código abaixo  para teste , obs ao salvar esse código o eslint iria converter ele para um código mais limpo. mas ainda não configuramos o eslint. depois veremos como vai ficar o código toda vez que salvar um arquivo e o eslint corrigir automaticamente 
+
+![](/assets/img/vs3.jpg)
+
+
+
+agora abrir o arquivo package.json e criar o script para execução do código .
+
+![](/assets/img/vscd1.jpg)
+
+adicionando essa linha de scripts com o nome de "dev" e build ' ja podemos executar o comando
+
+yarn dev
+
+![](/assets/img/vsss2.jpg)
+
+
+
+se apareceu o numero 5 no terminal tudo certo até aqui !!
