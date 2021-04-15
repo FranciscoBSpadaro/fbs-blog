@@ -8,7 +8,7 @@ color: "#D6BA32"
 tags:
   - Nodejs
 ---
-#  Projeto de um simples app para aprendizado
+# Projeto de um simples app para aprendizado
 
 ## Esse é um tutorial de passo a passo explicando como desenvolvi meu primeiro projeto de estudo com nodejs e typescript.
 
@@ -113,6 +113,8 @@ toda linha de comando com o -D  significa uma dependência de Developer ou apena
 mkdir src
 touch src/index.ts
 ```
+
+obs esses comandos rápidos para criar arquivo como o touch só funciona se selecionar o terminal gitbash no terminal padrão windows ele não funciona. se não tiver o gitbash instalado cria a pasta manualmente , o gitbash vem junto com o git para versão windows. 
 
 no arquivo index colocar o código abaixo  para teste , obs ao salvar esse código o eslint iria converter ele para um código mais limpo. mas ainda não configuramos o eslint. depois veremos como vai ficar o código toda vez que salvar um arquivo e o eslint corrigir automaticamente 
 
@@ -234,13 +236,9 @@ agora em edit settings.json
 
 ![](/assets/img/es2.jpg "eslint 2")
 
-
-
 editar o arquivo json ele deverá ficar igual ao da imagem para o funcionamento desejado 
 
 ![](/assets/img/es3.jpg "eslint 3")
-
-
 
 ```json
     "workbench.editor.enablePreview": false,
