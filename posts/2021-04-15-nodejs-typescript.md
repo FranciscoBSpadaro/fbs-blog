@@ -14,6 +14,16 @@ tags:
 
 ### Parte 1 - stack de módulos e ferramentas utilizadas
 
+
+
+**Nodejs -** <https://nodejs.org/en/>
+
+Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface, baseado no V8 interpretador de JavaScript em C++ do Google, mantido pela fundação Node.js em parceria com a Linux Foundation
+
+**Typescript -** <https://www.typescriptlang.org/>
+
+TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem. Anders Hejlsberg, arquiteto da linguagem C# e criador das linguagens Delphi e Turbo Pascal, trabalhou no desenvolvimento do TypeScript
+
 **Sucrase  -**  <https://github.com/alangpierce/sucrase>
 
 O Sucrase é uma alternativa ao Babel que permite um desenvolvimento muito rápido. O Sucrase assume que você está desenvolvendo em um navegador recente ou em uma versão recente do Node.js, acelerando a sua experiência em desenvolvimento.\
