@@ -14,8 +14,6 @@ tags:
 
 ### Parte 1 - stack de módulos e ferramentas utilizadas
 
-
-
 **Nodejs -** <https://nodejs.org/en/>
 
 Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface, baseado no V8 interpretador de JavaScript em C++ do Google, mantido pela fundação Node.js em parceria com a Linux Foundation
@@ -23,6 +21,10 @@ Node.js é um software de código aberto, multiplataforma, que executa códigos 
 **Typescript -** <https://www.typescriptlang.org/>
 
 TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem. Anders Hejlsberg, arquiteto da linguagem C# e criador das linguagens Delphi e Turbo Pascal, trabalhou no desenvolvimento do TypeScript
+
+**Nodemon -** <https://www.npmjs.com/package/nodemon>
+
+Nodemon é uma ferramenta que ajuda a desenvolver aplicativos baseados em node.js, reiniciando automaticamente o aplicativo de nó quando mudanças de arquivo no diretório são detectadas. O nodemon não requer nenhuma mudança adicional em seu código ou método de desenvolvimento. Nodemon é um invólucro substituto para o nó. Para usar o nodemon, substitua a palavra node na linha de comando ao executar seu script.
 
 **Sucrase  -**  <https://github.com/alangpierce/sucrase>
 
@@ -63,7 +65,9 @@ Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcio
 
 se você não sabe nada de docker já recomendo assistir ao video.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yb2udL9GG2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="760" height="415" src="https://www.youtube.com/embed/yb2udL9GG2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Docker é um conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional para entregar software em pacotes chamados contêineres. Os contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração.
 
 **Cors -** <https://www.npmjs.com/package/cors>
 
@@ -73,8 +77,6 @@ CORS é um pacote node.js para fornecer um middleware Connect / Express que pode
 
 Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento de especificações conduzidas por pipelines de CI / CD APIOps.
 
-
-
 ### Parte 2 - Iniciando o Projeto
 
 esse app consiste em se comunicar com o banco de dados mongodb instalado no **docker** utilizando o **Insomnia**  para enviar metodos GET/POST no formato json para inserir as informações no banco de dados.
@@ -82,6 +84,8 @@ esse app consiste em se comunicar com o banco de dados mongodb instalado no **do
 o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier . 
 
 o sucrase ira converter o código typescript para javascript para o ambiente de produção / build 
+
+Antes de iniciar lembre de instalar o nodejs  , apenas baixe e instale
 
 Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
 
@@ -99,4 +103,87 @@ O `package.json` é um arquivo de configuração utilizado para estipular e conf
 yarn add -D typescript sucrase
 ```
 
-toda linha de comando com o -D  significa uma dependencia de Developer ou apenas modo de desenvolvimento. módulos que nao vão ser usados em produção
+toda linha de comando com o -D  significa uma dependência de Developer ou apenas modo de desenvolvimento. módulos que não vão ser usados em produção
+
+2 - criar a pasta src ' source ' do projeto com o nome index.js para começar a fazer os teste
+
+![](/assets/img/vs2.jpg "mkdir src")
+
+```
+mkdir src
+touch src/index.ts
+```
+
+no arquivo index colocar o código abaixo  para teste , obs ao salvar esse código o eslint iria converter ele para um código mais limpo. mas ainda não configuramos o eslint. depois veremos como vai ficar o código toda vez que salvar um arquivo e o eslint corrigir automaticamente 
+
+![](/assets/img/vs3.jpg)
+
+agora abrir o arquivo package.json e criar o script para execução do código .
+
+![](/assets/img/vscd1.jpg)
+
+adicionando essa linha de scripts com o nome de "dev" e build ' já podemos executar o comando abaixo
+
+yarn dev
+
+![](/assets/img/vsss2.jpg)
+
+se apareceu o numero 5 no terminal tudo certo até aqui !!
+
+podemos observar que utilizando o sucrase o código executou bem rápido .
+
+Agora vamos instalar o nodemon para iniciar o monitoramento automático do projeto 
+
+![](/assets/img/nodemon.jpg "Nodemon")
+
+yarn add -D nodemon
+
+apos instalado criar um arquivo na pasta principal como o nome nodemon.json
+
+com esses parametros 
+
+<!--StartFragment-->
+
+|     |                                    |
+| --- | ---------------------------------- |
+| {   |                                    |
+|     | "watch": \["src"],                 |
+|     | "ext": "ts",                       |
+|     | "execMap": {                       |
+|     | "ts": "sucrase-node src/server.ts" |
+|     | }                                  |
+|     | }                                  |
+
+<!--EndFragment-->
+
+watch é a pasta onde o nodemon vai monitorar
+
+ext é a extensão a ser monitorada no caso ts é typescript , todo aquivo ts é monitorado suas modificações
+
+execmap  ele define quando um arquivo da extensao ts for atualizado qual script ira rodar.
+
+
+
+![](/assets/img/nodemoncfg.jpg "nodemon cfg")
+
+mude o nome do arquivo index.ts para server.ts 
+
+já atualize também o arquivo package.json  o script dev para server.ts
+
+<!--StartFragment-->
+
+|              |                                                       |
+| ------------ | ----------------------------------------------------- |
+| "scripts": { |                                                       |
+|              | "dev": "nodemon src/server.ts",                       |
+|              | "build": "",                                          |
+|              | "test": "echo \"Error: no test specified\" && exit 1" |
+|              | },                                                    |
+
+<!--EndFragment-->
+
+agora podemos testar o nodemon executando novamente yarn dev 
+
+![](/assets/img/nodemon2.jpg)
+
+dessa forma o nodemon já está em funcionamento.
