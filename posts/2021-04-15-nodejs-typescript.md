@@ -8,13 +8,11 @@ color: "#D6BA32"
 tags:
   - Nodejs
 ---
-# Projeto de uma mini app para aprendizado
+# Projeto de um mini app para aprendizado
 
 ## Esse é um tutorial de passo a passo explicando como desenvolvi meu primeiro projeto de estudo com nodejs e typescript.
 
-
-
-### Parte 1 - stack de módulos e ferramentas utilizadas 
+### Parte 1 - stack de módulos e ferramentas utilizadas
 
 **Sucrase  -**  <https://github.com/alangpierce/sucrase>
 
