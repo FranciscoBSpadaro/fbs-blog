@@ -16,7 +16,19 @@ tags:
 
 **Sucrase  -**  <https://github.com/alangpierce/sucrase>
 
+O Sucrase é uma alternativa ao Babel que permite um desenvolvimento muito rápido. O Sucrase assume que você está desenvolvendo em um navegador recente ou em uma versão recente do Node.js, acelerando a sua experiência em desenvolvimento.\
+Ele se concentra na compilação de extensões da linguagem não-padrão, como JSX, TypeScript e Flow.
+
+* O Sucrase não verifica se há erros no seu código, ele apenas produz código JS válido. Sempre verifique o código que você irá fornecer;
+* Ele também não produz código para navegadores antigos;
+* Não é um verificador de letras, ou seja, processa cada arquivo isoladamente.
+* É benéfico principalmente no desenvolvimento mas, às vezes, Babel será mais adequado para compilações de produção.
+
+O Sucrase visa o desenvolvimento de builds. Obtém ganhos de velocidade significativos provenientes de uma redução no escopo dos objetivos do compilador.
+
 **Eslint -** <https://eslint.org/>
+
+O ESLint analisa estaticamente seu código para encontrar problemas rapidamente. ESLint é integrado à maioria dos editores de texto e você pode executar o ESLint como parte de seu pipeline de integração contínua.
 
 **Express -** <https://expressjs.com/pt-br/>
 
