@@ -98,3 +98,12 @@ yarn add -D typescript sucrase
 ```
 
 toda linha de comando com o -D  significa uma dependencia de Developer ou apenas modo de desenvolvimento. módulos que nao vão ser usados em produção
+
+2 - criar a pasta src ' source ' do projeto com o nome index.js para começar a fazer os teste
+
+![](/assets/img/vs2.jpg "mkdir src")
+
+```
+mkdir src
+touch src/index.ts
+```
