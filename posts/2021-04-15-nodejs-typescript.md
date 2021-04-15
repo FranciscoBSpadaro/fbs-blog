@@ -137,3 +137,47 @@ Agora vamos instalar o nodemon para iniciar o monitoramento automático do proje
 ![](/assets/img/nodemon.jpg "Nodemon")
 
 yarn add -D nodemon
+
+apos instalado criar um arquivo na pasta principal como o nome nodemon.json
+
+com esses parametros 
+
+<!--StartFragment-->
+
+|     |                                    |
+| --- | ---------------------------------- |
+| {   |                                    |
+|     | "watch": \["src"],                 |
+|     | "ext": "ts",                       |
+|     | "execMap": {                       |
+|     | "ts": "sucrase-node src/server.ts" |
+|     | }                                  |
+|     | }                                  |
+
+<!--EndFragment-->
+
+watch é a pasta onde o nodemon vai monitorar
+
+ext é a extensão a ser monitorada no caso ts é typescript , todo aquivo ts é monitorado suas modificações
+
+execmap  ele define quando um arquivo da extensao ts for atualizado qual script ira rodar.
+
+
+
+![](/assets/img/nodemoncfg.jpg "nodemon cfg")
+
+mude o nome do arquivo index.ts para server.ts 
+
+já atualize também o arquivo package.json  o script dev para server.ts
+
+<!--StartFragment-->
+
+|              |                                                                     |
+| ------------ | ------------------------------------------------------------------- |
+| "scripts": { |                                                                     |
+|              | "dev": "nodemon src/server.ts",                                     |
+|              | "build": "sucrase ./src -d ./dist --transforms typescript,imports", |
+|              | "test": "echo \"Error: no test specified\" && exit 1"               |
+|              | },                                                                  |
+
+<!--EndFragment-->
