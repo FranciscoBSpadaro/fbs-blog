@@ -48,19 +48,16 @@ Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcio
 
 se você não sabe nada de docker já recomendo assistir ao video.
 
-
+<!-- blank line -->
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/watch?v=yb2udL9GG2U&list=FLGo8aGIrjyrvahZuPVM40MQ&index=12" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://youtu.be/yb2udL9GG2U" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
-
-
+<!-- blank line -->
 
 **Cors -** <https://www.npmjs.com/package/cors>
 
 CORS é um pacote node.js para fornecer um middleware Connect / Express que pode ser usado para habilitar CORS com várias opções.
-
-
 
 **Insomnia -**  <https://insomnia.rest/download>
 
