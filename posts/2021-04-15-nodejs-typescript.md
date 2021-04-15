@@ -63,7 +63,7 @@ Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcio
 
 **Docker -** <https://www.docker.com/>
 
-se você não sabe nada de docker já recomendo assistir ao video.
+se você não sabe nada de docker já recomendo assistir ao vídeo.
 
 <iframe width="760" height="415" src="https://www.youtube.com/embed/yb2udL9GG2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -81,13 +81,13 @@ Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento 
 
 esse app consiste em se comunicar com o banco de dados mongodb instalado no **docker** utilizando o **Insomnia**  para enviar metodos GET/POST no formato json para inserir as informações no banco de dados.
 
-o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier . 
+o projeto vai usar o Eslint que irar corrigir os erros de endentação no código junto com o prettier . 
 
 o sucrase ira converter o código typescript para javascript para o ambiente de produção / build 
 
 Antes de iniciar lembre de instalar o nodejs  , apenas baixe e instale
 
-Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
+Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependências do projeto
 
  yarn init -y
 
