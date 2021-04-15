@@ -46,6 +46,16 @@ Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcio
 
 **Docker -** <https://www.docker.com/>
 
+se você não sabe nada de docker já recomendo assistir ao video.
+
+
+
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/watch?v=yb2udL9GG2U&list=FLGo8aGIrjyrvahZuPVM40MQ&index=12" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+
+
+
 **Cors -** <https://www.npmjs.com/package/cors>
 
 **Insomnia -**  <https://insomnia.rest/download>
