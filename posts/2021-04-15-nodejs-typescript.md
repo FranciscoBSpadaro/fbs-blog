@@ -142,27 +142,11 @@ apos instalado criar um arquivo na pasta principal como o nome nodemon.json
 
 com esses parametros 
 
-<!--StartFragment-->
-
-|     |                                    |
-| --- | ---------------------------------- |
-| {   |                                    |
-|     | "watch": \["src"],                 |
-|     | "ext": "ts",                       |
-|     | "execMap": {                       |
-|     | "ts": "sucrase-node src/server.ts" |
-|     | }                                  |
-|     | }                                  |
-
-<!--EndFragment-->
-
 watch é a pasta onde o nodemon vai monitorar
 
 ext é a extensão a ser monitorada no caso ts é typescript , todo aquivo ts é monitorado suas modificações
 
 execmap  ele define quando um arquivo da extensao ts for atualizado qual script ira rodar.
-
-
 
 ![](/assets/img/nodemoncfg.jpg "nodemon cfg")
 
@@ -170,17 +154,13 @@ mude o nome do arquivo index.ts para server.ts
 
 já atualize também o arquivo package.json  o script dev para server.ts
 
-<!--StartFragment-->
+"scripts": {
 
-|              |                                                       |
-| ------------ | ----------------------------------------------------- |
-| "scripts": { |                                                       |
-|              | "dev": "nodemon src/server.ts",                       |
-|              | "build": "",                                          |
-|              | "test": "echo \"Error: no test specified\" && exit 1" |
-|              | },                                                    |
+"dev": "nodemon src/server.ts",   }
 
-<!--EndFragment-->
+
+
+
 
 agora podemos testar o nodemon executando novamente yarn dev 
 
