@@ -267,4 +267,26 @@ editar o arquivo json ele deverá ficar igual ao da imagem para o funcionamento 
 }
 ```
 
-esses são os parâmetros atuais para configurar o eslint , antigamente era necessário abrir os settings do vscode e usar outros parâmetros , com esses parâmetros ao salvar um arquivo ele vai corrigir automaticamente arquivos de javascript e typescripts
+esses são os parâmetros atuais para configurar o eslint , antigamente era necessário abrir os settings do vscode e usar outros parâmetros , com esses parâmetros ao salvar um arquivo ele vai corrigir automaticamente arquivos de javascript e typescripts  , quando abrir esse arquivo de configurações só vai ser necessário adicionar essas linhas
+
+"eslint.trace.server": "messages",
+
+"eslint.validate": [
+
+"javascript",
+
+"javascriptreact",
+
+"typescript",
+
+"typescriptreact"
+
+],
+
+"editor.codeActionsOnSave": {
+
+"source.fixAll.eslint": true
+
+},
+
+ao salvar essa configuração o eslint ja vai começar a apontar as correções
