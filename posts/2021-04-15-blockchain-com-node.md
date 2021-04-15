@@ -3,11 +3,12 @@ layout: post
 date: 2021-04-15 08:28:10
 title: Blockchain com Node
 description: Exemplo de blockchain com Node
-category: node
+category: nodejs
 color: "#EB7728"
 tags:
   - node
   - Blockchain
+  - Javascript
 ---
 ### Nesse post você vai ver um exemplo de uma pequena blockchain usando node
 
@@ -17,10 +18,26 @@ tags:
 
 **Crypto-js -** <https://www.npmjs.com/package/crypto-js>
 
-
-
 **SHA256** 
 
 Link do código completo no github 
 
 <https://github.com/FranciscoBSpadaro/BlockChain_Example>
+
+### Iniciando o código blockchain
+
+Crie uma pasta , abra essa pasta com o vscode , abra o terminal vscode e digite node -v para verificar se o node está funcionando e exibindo sua versão .
+
+cria um arquivo na pasta raiz com o nome block.js  esse arquivo vai ficar o nosso código javascript como linguagem orientada objeto , iremos criar uma classe construtora onde nela iremos ter os atributos de uma blockchain onde vai ter o bloco composto de Timestamp onde marca o tempo , lasthash é o hash do bloco anterior ,  hash é o algoritmo de criptografia SHA256.
+
+```javascript
+class Block{
+
+    constructor(timestamp, lastHash, hash, data){
+
+        this.timestamp = timestamp;
+        this.lastHash = lastHash;
+        this.hash = hash;
+        this.data = data;
+    }
+```
