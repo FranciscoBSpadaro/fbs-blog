@@ -158,11 +158,11 @@ já atualize também o arquivo package.json  o script dev para server.ts
 
 "dev": "nodemon src/server.ts",   }
 
+já podemos também configurar o build caso futuramente queira testar o build
 
+"build": "sucrase ./src -d ./dist --transforms typescript,imports"     obs no github do sucrase podemos ver os transforms que ele dispõe ,   nesse caso ele transforma o typescript para javascript e importar o código na pasta dist onde vai ter o código javascript de todo o projeto  -d significa diretório
 
-
-
-agora podemos testar o nodemon executando novamente yarn dev 
+agora podemos testar o nodemon executando novamente yarn dev  , pode executar também yarn build para ver a pasta dist ser criada com o código convertido para js.
 
 ![](/assets/img/nodemon2.jpg)
 
