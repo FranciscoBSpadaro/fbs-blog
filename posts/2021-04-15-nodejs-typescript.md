@@ -79,4 +79,12 @@ criado o packge.json
 
 O `package.json` é um arquivo de configuração utilizado para estipular e configurar dependências do seu projeto (quais outros pacotes ele vai precisar para ser executado) e scripts automatizados. Através dele conseguimos deixar claro uma "receita" para executar um projeto.
 
-2 -
+2 - Abra o vscode e selecione a pasta do projeto , abra o terminal e instale a primeira dependência . 
+
+![](/assets/img/vs1.jpg "yarn add -D typescript sucrase")
+
+```
+yarn add -D typescript sucrase
+```
+
+toda linha de comando com o -D  significa uma dependencia de Developer ou apenas modo de desenvolvimento. módulos que nao vão ser usados em produção
