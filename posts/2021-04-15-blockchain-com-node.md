@@ -57,3 +57,5 @@ Agora devemos converter a classe orientada objetos para string para podemos debu
 ```
 
 com essa função acima é possível converter os objetos em Strings.
+
+o Hash possui 32 caracteres no código agente consegue limitar a exibição dos caracteres usando a sintaxe substring.  mas isso não é obrigatório , se apagar .substring(0,10) os logs vao exibir o hash completo.
