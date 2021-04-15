@@ -22,7 +22,11 @@ tags:
 
 **MongoDB -** <https://www.mongodb.com/>
 
+MongoDB é um software de banco de dados orientado a documentos livre, de código aberto e multiplataforma, escrito na linguagem C++. Classificado como um programa de banco de dados NoSQL, o MongoDB usa documentos semelhantes a JSON com esquemas ' Schemas ' 
+
 **Mongoose -** <https://mongoosejs.com/>
+
+Mongoose é uma ferramenta de modelagem de objetos MongoDB projetada para funcionar em um ambiente assíncrono. O Mongoose oferece suporte a promessas 'Promise ' e retornos de chamada.
 
 **Docker -** <https://www.docker.com/>
 
