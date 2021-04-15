@@ -26,4 +26,6 @@ tags:
 
 **Docker -** <https://www.docker.com/>
 
+**Cors -** <https://www.npmjs.com/package/cors>
+
 **Insomnia -**  <https://insomnia.rest/download>
