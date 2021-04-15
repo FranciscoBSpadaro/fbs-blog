@@ -58,4 +58,10 @@ se você não sabe nada de docker já recomendo assistir ao video.
 
 **Cors -** <https://www.npmjs.com/package/cors>
 
+CORS é um pacote node.js para fornecer um middleware Connect / Express que pode ser usado para habilitar CORS com várias opções.
+
+
+
 **Insomnia -**  <https://insomnia.rest/download>
+
+Comece a construir, projetar e testar melhores APIs por meio do desenvolvimento de especificações conduzidas por pipelines de CI / CD APIOps.
