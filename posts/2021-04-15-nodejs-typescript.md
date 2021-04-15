@@ -81,6 +81,8 @@ esse app consiste em se comunicar com o banco de dados mongodb instalado no **do
 
 o projeto vai usar o Eslint que irar corrigir os erros de identação no codigo junto com o prettier . 
 
+o sucrase ira converter o código typescript para javascript para o ambiente de produção / build 
+
 Crie uma pasta para o projeto , vamos usar o yarn para instalar os módulos e dependencias do projeto
 
 1 - yarn init -y
