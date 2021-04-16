@@ -594,6 +594,20 @@ no post escolher json e colocar essa estrutura json
 	"LastName": "Spadaro"
 }
 
-![](/assets/img/insomina.jpg)
+![](/assets/img/insomina.jpg "post")
 
-ao clicar em send vai aparecer no preview  a resposta mostrando que está funcionando
+ao clicar em send vai aparecer no preview  a resposta mostrando que está funcionando 
+
+o get nao precisar ter nada no corpo. basta clicar em send e vai exibir os dados json do banco.
+
+![](/assets/img/get.jpg "get")
+
+agora se abrir o link  <http://localhost:1024/users>  deverá abrir a lista no browser . no caso eu mandei o post varias vezes 
+
+![](/assets/img/mongofim.jpg)
+
+isso é tudo !!
+
+código completo no github 
+
+<https://github.com/FranciscoBSpadaro/node-nodemon>
