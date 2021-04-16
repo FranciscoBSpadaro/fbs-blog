@@ -322,3 +322,62 @@ instalando o types do express  no modo developer - D e também para os outros m�
 ```
 yarn add @types/express @types/cors @types/mongoose -D
 ```
+
+agora vamos importar os modulos e utilizar uma classe o typescript se integra muito bem com classe pois adiciona muitas funcões.
+
+```javascript
+import express from 'express'
+import cors from 'cors'
+import mongoose from 'mongoose'
+
+class App {
+    public express: express.Application
+    public constructor () {
+      this.express = express()
+
+    }
+
+    private middlewares (): void {
+      this.express.use(express.json())
+      this.express.use(cors())
+    }
+
+    private database (): void {
+      mongoose.connect('mongodb://localhost:27017/tsnode', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      })
+    }
+    
+    private routes (): void {
+      this.express.get('/', (req, res) => {
+        return res.send('hello world')
+    })
+}
+ 
+ export default new App().express
+```
+
+public express: classe publica com o nome express e  definindo o tipo dela como express.Application  e  construtor publico
+
+private middlewares (): void {  o retorno precisa ser declarado , então usamos void de vazio para pode criar a classe e a classe privado só pode ser acessado por dentro da classe 
+
+this.express.use(express.json())
+      this.express.use(cors())   usamos this. e use . para informar a classe que ela vai usar um arquivo json e o cors que é uma api  na sua função 
+
+  private database (): void {
+      mongoose.connect('mongodb://localhost:27017/tsnode',
+
+agora fazemos o mongoose se conectar no nosso banco de dados que está em funcionamento no docker.
+
+opa vc ainda não instalou o docker? 
+
+baixe e instale o docker , inicie o docker , abra o cmd do windows e execute o comando
+
+**docker pull mongo**
+
+apos terminar executar
+
+**docker run --name my_mongo -p 27017:27017 -d mongo**
+
+o docker vai iniciar o mongo db com a porta 27017 liberada
