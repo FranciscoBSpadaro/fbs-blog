@@ -100,7 +100,7 @@ const block = new Block('1234', '1234567ASDFGHJ', '12345678ASDFGHJKL', '100');
 console.log(block.toString());
 ```
 
-esses 4 dados sao aleatorios para testes , no caso sao os 4 elementos do blockchain
+esses 4 dados sao aleatorios para testes , no caso sao os 4 elementos do blockchain esse teste simula um novo bloco.
 
 executar o comando  **node teste.js**   para  teste
 
