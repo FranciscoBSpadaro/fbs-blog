@@ -488,13 +488,6 @@ class UserController {
     const users = await User.find()
     return res.json(users)
   }
-
-  // criar usuário
-  public async store (req: Request, res: Response): Promise<Response> {
-    const user = await User.create(req.body)
-    console.log(user.fullName)
-    return res.json(user)
-  }
 }
 
 export default new UserController()
@@ -558,3 +551,35 @@ class App {
 
 export default new App().express
 ```
+
+
+
+agora ao voltar para http://localhost:1024/users  devera aparecer um array vazio  \[]
+
+entao agora vamos criar um método de criaçao de usuário no  [UserControllers.ts](https://github.com/FranciscoBSpadaro/node-nodemon/blob/master/src/controllers/UserControllers.ts "UserControllers.ts")
+
+
+
+```javascript
+import { Request, Response } from 'express'
+
+import User from '../schemas/User'
+
+class UserController {
+  public async index (_req: Request, res: Response): Promise<Response> {
+    const users = await User.find()
+    return res.json(users)
+  }
+
+  // criar usuário
+  public async store (req: Request, res: Response): Promise<Response> {
+    const user = await User.create(req.body)
+    console.log(user.fullName)
+    return res.json(user)
+  }
+}
+
+export default new UserController()
+```
+
+agora vamos testar no insomnia já que as rotas já estão configuradas .
