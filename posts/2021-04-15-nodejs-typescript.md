@@ -502,4 +502,6 @@ export default new UserController()
 
 nesse código foi necessário importar o Request e Response do express pois o req e res nao foi reconhecido 
 
+import User from '../schemas/User'   < importando todos os usuarios do banco de dados 
+
 o retorno da função tem que quer uma promise pois é async e a promise recebe um tipo de argumento <Response> a response seria o return  res,json(users)
