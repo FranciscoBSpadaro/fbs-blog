@@ -469,11 +469,37 @@ interface UserInterface extends Document  , é necessário criar uma interface d
 
 const UserSchema = new Schema({  é o metodo que vai gerar a estrutura do banco de dados em si
 
-
-
 UserSchema.methods.fullName = function (): string {
   return this.firstName + ' ' + this.lastName       é uma formula para reprodutir o fullName
 
 ao usar console.log(fullName)  devera aparecer o nome completo.
 
 export default model<UserInterface>('User', UserSchema)  o mode do export precisa extender para Userinterface igual na estrutura do codigo , esse é um padrão do moongose
+
+Agora criar a pasta controllers dentro de src  com o arquivo  [UserControllers.ts](https://github.com/FranciscoBSpadaro/node-nodemon/blob/master/src/controllers/UserControllers.ts "UserControllers.ts")
+
+```javascript
+import { Request, Response } from 'express'
+
+import User from '../schemas/User'
+
+class UserController {
+  public async index (_req: Request, res: Response): Promise<Response> {
+    const users = await User.find()
+    return res.json(users)
+  }
+
+  // criar usuário
+  public async store (req: Request, res: Response): Promise<Response> {
+    const user = await User.create(req.body)
+    console.log(user.fullName)
+    return res.json(user)
+  }
+}
+
+export default new UserController()
+```
+
+nesse código foi necessário importar o Request e Response do express pois o req e res nao foi reconhecido 
+
+o retorno da função tem que quer uma promise pois é async e a promise recebe um tipo de argumento <Response> a response seria o return  res,json(users)
