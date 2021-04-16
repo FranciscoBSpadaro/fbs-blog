@@ -181,3 +181,17 @@ agora com o modulo instalado vamos criar uma constante no inicio do código do b
 ```javascript
 const SHA256 = require('crypto-js/sha256')
 ```
+
+agora vamos chamar o algoritmo na funçao static 
+
+```javascript
+    static hash(timestamp, lastHash, hash, data){
+        return SHA256(`${timestamp}${lastHash}${hash}${data}`).toString();
+    }
+```
+
+a função chama o return SHA256 com as 4 propriedades do block e no final .toString para chamar no teste.
+
+![](/assets/img/hash3.jpg)
+
+ao executar  node teste.js  podemos ver que o valor de hash agora é gerado pelo algoritmo SHA256  , o timestamp ainda é gerado pelo método Date.now . apenas o lasthash e data ainda está manual.
