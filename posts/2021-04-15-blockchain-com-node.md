@@ -195,3 +195,5 @@ a função chama o return SHA256 com as 4 propriedades do block e no final .toSt
 ![](/assets/img/hash3.jpg)
 
 ao executar  node teste.js  podemos ver que o valor de hash agora é gerado pelo algoritmo SHA256  , o timestamp ainda é gerado pelo método Date.now . apenas o lasthash e data ainda está manual.
+
+Finalizamos o nosso código gerando uma pequena blockchain , espero que tenha gostado.
