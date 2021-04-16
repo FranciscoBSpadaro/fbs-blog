@@ -604,6 +604,8 @@ agora se abrir o link  <http://localhost:1024/users>  deverá abrir a lista no b
 
 ![](/assets/img/mongofim.jpg)
 
+obs se vc percebeu o console.log(user.fullName) do arquivo [UserControllers.ts](https://github.com/FranciscoBSpadaro/node-nodemon/blob/master/src/controllers/UserControllers.ts "UserControllers.ts")  não está sendo exibido no terminal , isso ainda preciso descobrir como resolver. 
+
 isso é tudo !!
 
 código completo no github 
