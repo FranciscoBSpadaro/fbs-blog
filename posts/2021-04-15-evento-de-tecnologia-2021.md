@@ -10,8 +10,6 @@ tags:
 ---
 ### Rocketseat Next Level Week 2021
 
-![](/assets/img/nodenlw.bmp "nlw")
-
-
+![](/assets/img/nodenlw.jpg "nlw")
 
 <https://nextlevelweek.com/convite/franciscobspadaro>
