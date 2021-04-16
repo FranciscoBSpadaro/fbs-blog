@@ -432,3 +432,182 @@ Criando os Schemas que são as estruturas do banco de dados
 criando o schema usuario 
 
 criar pasta schemas dentro de src com arquivo User.ts
+
+```javascript
+import { Schema, model, Document } from 'mongoose'
+
+interface UserInterface extends Document {
+  email ?: string
+  firstName ?: string
+  lastName ?: string
+  fullName (): string
+}
+
+const UserSchema = new Schema({
+  email: String,
+  firstName: String,
+  lastName: String
+}, {
+  timestamps: true
+})
+
+UserSchema.methods.fullName = function (): string {
+  return this.firstName + ' ' + this.lastName
+}
+export default model<UserInterface>('User', UserSchema)
+```
+
+começamos importando os metodos do moongose  Schema, model, e Document.
+
+Document \
+Os documentos do Mongoose representam um mapeamento individual para documentos armazenados no MongoDB. Cada documento é uma instância de seu modelo.\
+Document e Model são classes distintas no Mongoose. A classe Model é uma subclasse da classe Document. Ao usar o construtor Model, você cria um novo documento.
+
+schema é a estrutura do banco de dados .
+
+interface UserInterface extends Document  , é necessário criar uma interface do javascript que é uma forma de falar qual a tipagem de um objeto de uma estrutura . com a estrutura  com email firtstname etc.. ele é necessário para não perder os metodos qual for requisitado nos próximos codigos que vamos criar
+
+const UserSchema = new Schema({  é o metodo que vai gerar a estrutura do banco de dados em si
+
+UserSchema.methods.fullName = function (): string {
+  return this.firstName + ' ' + this.lastName       é uma formula para reprodutir o fullName
+
+ao usar console.log(fullName)  devera aparecer o nome completo.
+
+export default model<UserInterface>('User', UserSchema)  o mode do export precisa extender para Userinterface igual na estrutura do codigo , esse é um padrão do moongose
+
+Agora criar a pasta controllers dentro de src  com o arquivo  [UserControllers.ts](https://github.com/FranciscoBSpadaro/node-nodemon/blob/master/src/controllers/UserControllers.ts "UserControllers.ts")
+
+```javascript
+import { Request, Response } from 'express'
+
+import User from '../schemas/User'
+
+class UserController {
+  public async index (_req: Request, res: Response): Promise<Response> {
+    const users = await User.find()
+    return res.json(users)
+  }
+}
+
+export default new UserController()
+```
+
+nesse código foi necessário importar o Request e Response do express pois o req e res nao foi reconhecido 
+
+import User from '../schemas/User'   < importando todos os usuarios do banco de dados 
+
+o retorno da função tem que quer uma promise pois é async e a promise recebe um tipo de argumento <Response> a response seria o return  res,json(users)
+
+agora para testar vamos na pasta src e criar o arquivo de rotas routes.ts 
+
+```javascript
+import { Router } from 'express'
+
+import UserController from './controllers/UserControllers'
+
+const routes = Router()
+
+routes.get('/users', UserController.index)
+routes.post('/users', UserController.store)
+
+export default 
+```
+
+Com o código acima vamos agora importar as rotas no app.ts 
+
+```javascript
+import express from 'express'
+import cors from 'cors'
+import mongoose from 'mongoose'
+import routes from './routes'
+
+class App {
+    public express: express.Application
+    public constructor () {
+      this.express = express()
+
+      this.middlewares()
+      this.database()
+      this.routes()
+    }
+
+    private middlewares (): void {
+      this.express.use(express.json())
+      this.express.use(cors())
+    }
+
+    private database (): void {
+      mongoose.connect('mongodb://localhost:27017/tsnode', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      })
+    }
+
+    private routes (): void {
+      this.express.use(routes)
+    }
+}
+
+export default new App().express
+```
+
+
+
+agora ao voltar para http://localhost:1024/users  devera aparecer um array vazio  \[]
+
+entao agora vamos criar um método de criaçao de usuário no  [UserControllers.ts](https://github.com/FranciscoBSpadaro/node-nodemon/blob/master/src/controllers/UserControllers.ts "UserControllers.ts")
+
+
+
+```javascript
+import { Request, Response } from 'express'
+
+import User from '../schemas/User'
+
+class UserController {
+  public async index (_req: Request, res: Response): Promise<Response> {
+    const users = await User.find()
+    return res.json(users)
+  }
+
+  // criar usuário
+  public async store (req: Request, res: Response): Promise<Response> {
+    const user = await User.create(req.body)
+    console.log(user.fullName)
+    return res.json(user)
+  }
+}
+
+export default new UserController()
+```
+
+agora vamos testar no Insomnia  já que as rotas já estão configuradas .
+
+no Insomina criar um metodo get e post
+
+no post escolher json e colocar essa estrutura json
+
+{
+	"email": "francisco.spadaro@outlook.com",
+	"firstName": "Francisco",
+	"LastName": "Spadaro"
+}
+
+![](/assets/img/insomina.jpg "post")
+
+ao clicar em send vai aparecer no preview  a resposta mostrando que está funcionando 
+
+o get nao precisar ter nada no corpo. basta clicar em send e vai exibir os dados json do banco.
+
+![](/assets/img/get.jpg "get")
+
+agora se abrir o link  <http://localhost:1024/users>  deverá abrir a lista no browser . no caso eu mandei o post varias vezes 
+
+![](/assets/img/mongofim.jpg)
+
+isso é tudo !!
+
+código completo no github 
+
+<https://github.com/FranciscoBSpadaro/node-nodemon>
