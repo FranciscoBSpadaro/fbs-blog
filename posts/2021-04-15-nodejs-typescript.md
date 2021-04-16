@@ -288,3 +288,15 @@ esses são os parâmetros atuais para configurar o eslint , antigamente era nece
 },
 
 ao salvar essa configuração o eslint ja vai começar a apontar as correções
+
+![](/assets/img/eslintok.jpg "eslint corrigindo")
+
+agora o eslint ja avisou os erros no codigo deixando ele mais limpo seguindo os padrões configurados , deixando o código sem necessidade de especificar o tipo da variável , sem necessidade de uma tipagem forte no código 
+
+**Instalando o Prettier** 
+
+```ignore
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+```
+
+agora basta instalar o prettier na extensão do vscode  e agora toda vez que um código ficar fora do padrão do eslint ao salvar o código o prettier vai corrigir automaticamente
