@@ -583,3 +583,17 @@ export default new UserController()
 ```
 
 agora vamos testar no Insomnia  já que as rotas já estão configuradas .
+
+no Insomina criar um metodo get e post
+
+no post escolher json e colocar essa estrutura json
+
+{
+	"email": "francisco.spadaro@outlook.com",
+	"firstName": "Francisco",
+	"LastName": "Spadaro"
+}
+
+![](/assets/img/insomina.jpg)
+
+ao clicar em send vai aparecer no preview  a resposta mostrando que está funcionando
