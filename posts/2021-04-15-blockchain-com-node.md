@@ -104,6 +104,6 @@ esses 4 dados sao aleatorios para testes , no caso sao os 4 elementos do blockch
 
 executar o comando  **node teste.js**   para  teste
 
-![](/assets/img/block1.bmp)
+![](/assets/img/block1.jpg)
 
 ira retornar algo como no print acima , agora sabemos que está funcionando já podemos continuar com o código
