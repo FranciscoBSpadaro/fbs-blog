@@ -168,6 +168,16 @@ ao executar node teste.js vai sair dessa forma , o timestamp exibe os milissegun
 
 ![](/assets/img/block2.jpg)
 
-
-
 **Criando hash através do SHA-256**
+
+instalar o modulo cripto-js
+
+execute no terminal :
+
+npm i crypto-js
+
+agora com o modulo instalado vamos criar uma constante no inicio do código do block.js para requisitar esse algoritmo .
+
+```javascript
+const SHA256 = require('crypto-js/sha256')
+```
