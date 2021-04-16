@@ -505,3 +505,18 @@ nesse código foi necessário importar o Request e Response do express pois o re
 import User from '../schemas/User'   < importando todos os usuarios do banco de dados 
 
 o retorno da função tem que quer uma promise pois é async e a promise recebe um tipo de argumento <Response> a response seria o return  res,json(users)
+
+agora para testar vamos na pasta src e criar o arquivo de rotas routes.ts 
+
+```javascript
+import { Router } from 'express'
+
+import UserController from './controllers/UserControllers'
+
+const routes = Router()
+
+routes.get('/users', UserController.index)
+routes.post('/users', UserController.store)
+
+export default 
+```
