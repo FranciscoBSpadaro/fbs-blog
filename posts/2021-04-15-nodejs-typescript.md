@@ -370,6 +370,9 @@ this.express.use(express.json())
 
 agora fazemos o mongoose se conectar no nosso banco de dados que está em funcionamento no docker.
 
+ useNewUrlParser: true,
+        useUnifiedTopology: true    são os parâmetros atuais  que o mongoose precisa para acessar o banco de dados e não ter erros 
+
 opa vc ainda não instalou o docker? 
 
 baixe e instale o docker , inicie o docker , abra o cmd do windows e execute o comando
