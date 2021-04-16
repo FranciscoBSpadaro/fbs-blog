@@ -552,13 +552,9 @@ class App {
 export default new App().express
 ```
 
-
-
 agora ao voltar para http://localhost:1024/users  devera aparecer um array vazio  \[]
 
 entao agora vamos criar um método de criaçao de usuário no  [UserControllers.ts](https://github.com/FranciscoBSpadaro/node-nodemon/blob/master/src/controllers/UserControllers.ts "UserControllers.ts")
-
-
 
 ```javascript
 import { Request, Response } from 'express'
@@ -588,11 +584,13 @@ no Insomina criar um metodo get e post
 
 no post escolher json e colocar essa estrutura json
 
+```json
 {
 	"email": "francisco.spadaro@outlook.com",
 	"firstName": "Francisco",
 	"LastName": "Spadaro"
 }
+```
 
 ![](/assets/img/insomina.jpg "post")
 
