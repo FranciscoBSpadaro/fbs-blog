@@ -159,4 +159,13 @@ no arquivo teste.js  vamo criar uma const
 
 ```javascript
 const primeiroBloco = Block.mineBlock(Block.genesis(), '$500');
+console.log(primeiroBloco.toString());
 ```
+
+essa const com nome de primeiroBloco chama o mine block e block genesis com um valor de teste como exemplo 500 dólares 
+
+ao executar node teste.js vai sair dessa forma , o timestamp exibe os milissegundos atuais , existe um site que converte os milissegundos em horas 
+
+
+
+![](/assets/img/block2.jpg)
