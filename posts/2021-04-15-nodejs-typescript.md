@@ -425,4 +425,10 @@ executamos yarn dev e vamos acessar
 
 localhost:1024    e vemos o hello word  
 
-entao tudo funcionando até aqui . agora vamos trabalhar no banco de dados .
+entao tudo funcionando até aqui . agora vamos trabalhar no banco de dados . 
+
+Criando os Schemas que são as estruturas do banco de dados
+
+criando o schema usuario 
+
+criar pasta schemas dentro de src com arquivo User.ts
