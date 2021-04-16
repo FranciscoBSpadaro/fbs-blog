@@ -18,7 +18,7 @@ tags:
 
 **Crypto-js -** <https://www.npmjs.com/package/crypto-js>
 
-**SHA256** 
+**SHA256**  - Secure Hash Algorithm   256 bits (32 octets) ou 32 caracteres 
 
 Link do código completo no github 
 
@@ -166,6 +166,8 @@ essa const com nome de primeiroBloco chama o mine block e block genesis com um v
 
 ao executar node teste.js vai sair dessa forma , o timestamp exibe os milissegundos atuais , existe um site que converte os milissegundos em horas 
 
-
-
 ![](/assets/img/block2.jpg)
+
+
+
+**Criando hash através do SHA-256**
