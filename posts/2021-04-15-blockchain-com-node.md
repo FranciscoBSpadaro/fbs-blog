@@ -119,7 +119,6 @@ Criando a função genesis usando o identificador static , static permite chamar
         
         return new this('Genesis time', '------', 'JHASHID3233', []);
     }
-
 ```
 
 Genis time = timestamp , '-----' = lasthash no caso não temos um last hash pois esse é o primeiro bloco
@@ -129,3 +128,29 @@ hash recebe valores de exemplo 'JHASHID3233' , e a data =  recebe um array = \[]
 Função genesis criada.
 
 ![](/assets/img/genesis.jpg "genesis block")
+
+
+
+**Função MineBlock**
+
+agora podemos gerar novos blocks usando a informação do bloco genesis , usando sintaxe static novamente os argumentos vem do ultimo bloco.
+
+```javascript
+    static mineBlock(lastBlock, data){
+
+        const timestamp = Date.now();
+        const lastHash = lastBlock.hash;
+        const hash = 'a-fazer-hash';
+      
+        return new this(timestamp, lastHash, hash, data);
+        
+    }
+```
+
+lastBlock o bloco anterior , data é os dados que vamos armazenar.
+
+Date.now é um objeto do javascript com a função .now que é um valor do tempo que se passou desde 1970 até o presente momento.
+
+const lastHash é a constante do valor do hash anterior lastBlock.hash
+
+ainda nao fazemos uma funçao para gerar um valor de codificaçao randomico para o hash
