@@ -8,15 +8,13 @@ color: "#2DA0C3"
 tags:
   - HTML
 ---
-### Nesse post vou explicar como receber um formulário HTML via e-mail usando o netlify 
+### Nesse post vou explicar como receber um formulário HTML via e-mail usando o netlify
 
 **Repositório do Formulário HTML -** <https://github.com/FranciscoBSpadaro/html_formulario_netlify>
 
 **Formulário HTML -** <https://fbs-form.netlify.app/formulario.html>
 
 **Netlify -**  <https://www.netlify.com/>
-
-
 
 Como vocês já sabem meu site , blog , e projetos são hospedados no netlify , esse serviço gratuito usa o repositorio github para colocar no ar nossos sites.
 
@@ -38,3 +36,13 @@ Agora é necessário colocar um parâmetro de configuração do Netlify dentro d
 ```
 
 Na minha tag de formulário tem o nome que escolhi , f_cadastro , e o método POST , somente com esse método o netlify faz o envio do formulário no email , e a tag de identificação para o netlify realizar a operação é  **data-netlify="true"**
+
+O Netlify tem sistema de proteção de spam então o formulário precisa ser preenchido com informações verdadeiras .
+
+![](/assets/img/tks.jpg "Concluído")
+
+
+
+Se tudo estiver correto ao preencher o formulário você vai receber essa tela de aviso.
+
+FIM !
