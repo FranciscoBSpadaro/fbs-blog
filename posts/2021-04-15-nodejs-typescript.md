@@ -582,4 +582,4 @@ class UserController {
 export default new UserController()
 ```
 
-agora vamos testar no insomnia já que as rotas já estão configuradas .
+agora vamos testar no Insomnia  já que as rotas já estão configuradas .
