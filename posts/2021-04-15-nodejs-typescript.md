@@ -432,3 +432,48 @@ Criando os Schemas que são as estruturas do banco de dados
 criando o schema usuario 
 
 criar pasta schemas dentro de src com arquivo User.ts
+
+```javascript
+import { Schema, model, Document } from 'mongoose'
+
+interface UserInterface extends Document {
+  email ?: string
+  firstName ?: string
+  lastName ?: string
+  fullName (): string
+}
+
+const UserSchema = new Schema({
+  email: String,
+  firstName: String,
+  lastName: String
+}, {
+  timestamps: true
+})
+
+UserSchema.methods.fullName = function (): string {
+  return this.firstName + ' ' + this.lastName
+}
+export default model<UserInterface>('User', UserSchema)
+```
+
+começamos importando os metodos do moongose  Schema, model, e Document.
+
+Document \
+Os documentos do Mongoose representam um mapeamento individual para documentos armazenados no MongoDB. Cada documento é uma instância de seu modelo.\
+Document e Model são classes distintas no Mongoose. A classe Model é uma subclasse da classe Document. Ao usar o construtor Model, você cria um novo documento.
+
+schema é a estrutura do banco de dados .
+
+interface UserInterface extends Document  , é necessário criar uma interface do javascript que é uma forma de falar qual a tipagem de um objeto de uma estrutura . com a estrutura  com email firtstname etc.. ele é necessário para não perder os metodos qual for requisitado nos próximos codigos que vamos criar
+
+const UserSchema = new Schema({  é o metodo que vai gerar a estrutura do banco de dados em si
+
+
+
+UserSchema.methods.fullName = function (): string {
+  return this.firstName + ' ' + this.lastName       é uma formula para reprodutir o fullName
+
+ao usar console.log(fullName)  devera aparecer o nome completo.
+
+export default model<UserInterface>('User', UserSchema)  o mode do export precisa extender para Userinterface igual na estrutura do codigo , esse é um padrão do moongose
