@@ -18,7 +18,7 @@ tags:
 
 **Crypto-js -** <https://www.npmjs.com/package/crypto-js>
 
-**SHA256** 
+**SHA256**  - Secure Hash Algorithm   256 bits (32 octets) ou 32 caracteres 
 
 Link do código completo no github 
 
@@ -166,6 +166,32 @@ essa const com nome de primeiroBloco chama o mine block e block genesis com um v
 
 ao executar node teste.js vai sair dessa forma , o timestamp exibe os milissegundos atuais , existe um site que converte os milissegundos em horas 
 
-
-
 ![](/assets/img/block2.jpg)
+
+**Criando hash através do SHA-256**
+
+instalar o modulo cripto-js
+
+execute no terminal :
+
+npm i crypto-js
+
+agora com o modulo instalado vamos criar uma constante no inicio do código do block.js para requisitar esse algoritmo .
+
+```javascript
+const SHA256 = require('crypto-js/sha256')
+```
+
+agora vamos chamar o algoritmo na funçao static 
+
+```javascript
+    static hash(timestamp, lastHash, hash, data){
+        return SHA256(`${timestamp}${lastHash}${hash}${data}`).toString();
+    }
+```
+
+a função chama o return SHA256 com as 4 propriedades do block e no final .toString para chamar no teste.
+
+![](/assets/img/hash3.jpg)
+
+ao executar  node teste.js  podemos ver que o valor de hash agora é gerado pelo algoritmo SHA256  , o timestamp ainda é gerado pelo método Date.now . apenas o lasthash e data ainda está manual.
