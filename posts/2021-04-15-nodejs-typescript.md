@@ -334,6 +334,10 @@ class App {
     public express: express.Application
     public constructor () {
       this.express = express()
+      
+      this.middlewares()
+      this.database()
+      this.routes()
 
     }
 
@@ -393,4 +397,32 @@ podemos abrir a interface de linha de comandos dele e criar a pasta tsnode que c
 
 ![](/assets/img/docker2.jpg "docker")
 
-podemos clicar na opção cli e vai abrir o console do mongodb , podemos digitar mkdir tsnode  para criar a pasta tsnode e depois  digitar ls  e ver as pastas criadas
+podemos clicar na opção cli e vai abrir o console do mongodb , podemos digitar mkdir tsnode  para criar a pasta tsnode e depois  digitar ls  e ver as pastas criadas .
+
+continuando o entendimento do codigo 
+
+  private routes (): void {
+      this.express.get('/', (req, res) => {
+        return res.send('hello world')     metodo get no express para pegar o req e res  request e response do express e retorna um hello word na tela , nesse caso o metodo get ele ja resonheceu a função req e res automaticamente porem isso nao vai acontecer sempre logo veremos uma necessidade de tipagem manual do req e res .
+
+  this.middlewares()
+      this.database()
+      this.routes()    precisa ser declarado para chamar os metodos no arquivo server.ts
+
+depois exportamos o codigo.
+
+agora no arquivo sever.ts  colocamos o codigo :
+
+```javascript
+import app from './app'
+
+app.listen(1024)
+```
+
+importamos o app.ts e usamos a porta 1024 porque qualquer porta acima dessa pode estar bloqueada no seu windows entao portas abaixo de 1024 funciona.
+
+executamos yarn dev e vamos acessar 
+
+localhost:1024    e vemos o hello word  
+
+entao tudo funcionando até aqui . agora vamos trabalhar no banco de dados .
