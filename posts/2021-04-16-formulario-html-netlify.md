@@ -8,7 +8,7 @@ color: "#2DA0C3"
 tags:
   - HTML
 ---
-### Nesse post vou explicar como receber um formulário HTML via e-mail usando o netlify
+
 
 **Repositório do Formulário HTML -** <https://github.com/FranciscoBSpadaro/html_formulario_netlify>
 
@@ -40,8 +40,6 @@ Na minha tag de formulário tem o nome que escolhi , f_cadastro , e o método PO
 O Netlify tem sistema de proteção de spam então o formulário precisa ser preenchido com informações verdadeiras .
 
 ![](/assets/img/tks.jpg "Concluído")
-
-
 
 Se tudo estiver correto ao preencher o formulário você vai receber essa tela de aviso.
 
