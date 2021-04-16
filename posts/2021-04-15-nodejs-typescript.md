@@ -381,3 +381,13 @@ apos terminar executar
 **docker run --name my_mongo -p 27017:27017 -d mongo**
 
 o docker vai iniciar o mongo db com a porta 27017 liberada
+
+![](/assets/img/mongo1.jpg)
+
+apos executar os comandos o mongo db vai estar rodando, já é possivel clicarm abrir no browser e ver que esta funcionando.
+
+podemos abrir a interface de linha de comandos dele e criar a pasta tsnode que colocamos no link do codigo .
+
+![](/assets/img/docker2.jpg "docker")
+
+podemos clicar na opção cli e vai abrir o console do mongodb , podemos digitar mkdir tsnode  para criar a pasta tsnode e depois  digitar ls  e ver as pastas criadas
