@@ -300,3 +300,25 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 ```
 
 agora basta instalar o prettier na extensão do vscode  e agora toda vez que um código ficar fora do padrão do eslint ao salvar o código o prettier vai corrigir automaticamente
+
+Agora com toda nossa estrutura de desenvolvimento pronta podemos começar nosso aplicativo !!
+
+na pasta src criar arquivo app.ts 
+
+instalar as dependencias do app.
+
+```
+yarn add express cors mongoose
+```
+
+agora no app.ts importar o express.
+
+![](/assets/img/errroexpress.jpg "erro import")
+
+agora o vscode indicou um erro com 3 pontinhos brancos ali no express , esse erro significa que não instalamos uma dependencia de tipos para o express , é necesarrio um pacote / lib  para o express funcionar no typescript
+
+instalando o types do express  no modo developer - D e também para os outros módulos que vão precisar de types
+
+```
+yarn add @types/express @types/cors @types/mongoose -D
+```
