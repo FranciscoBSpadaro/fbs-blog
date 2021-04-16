@@ -90,3 +90,20 @@ class Block{
 
 module.exports = Block;
 ```
+
+agora criar o arquivo teste.js  para testar nosso bloco
+
+```javascript
+const Block = require('./block.js');
+
+const block = new Block('1234', '1234567ASDFGHJ', '12345678ASDFGHJKL', '100');
+console.log(block.toString());
+```
+
+esses 4 dados sao aleatorios para testes , no caso sao os 4 elementos do blockchain
+
+executar o comando node. teste.js para  teste
+
+![](/assets/img/block1.bmp)
+
+ira retornar algo como no print acima , agora sabemos que está funcionando já podemos continuar com o código
