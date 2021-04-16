@@ -2,9 +2,9 @@
 layout: post
 date: 2021-04-15 08:14:01
 title: Evento de Tecnologia 2021
-description: Trilha node Rocketseat
+description: Alguns eventos que participei
 category: events
-color: "#7D669E"
+color: "#B31917"
 tags:
   - eventos
 ---
@@ -13,3 +13,7 @@ tags:
 ![](/assets/img/nodenlw.jpg "nlw")
 
 <https://nextlevelweek.com/convite/franciscobspadaro>
+
+
+
+post incompleto
