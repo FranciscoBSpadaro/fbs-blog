@@ -299,4 +299,4 @@ agora o eslint ja avisou os erros no codigo deixando ele mais limpo seguindo os 
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 ```
 
-agora basta instalar o prettier na extensão do vscode  e agora sim toda vez que um código ficar fora do padrão do eslint ao salvar o código o prettier vai corrigir automaticamente
+agora basta instalar o prettier na extensão do vscode  e agora toda vez que um código ficar fora do padrão do eslint ao salvar o código o prettier vai corrigir automaticamente
