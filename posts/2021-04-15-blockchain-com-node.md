@@ -44,7 +44,7 @@ class Block{
 
 Com a sintaxe this vamos conseguir instanciar os objetos dentro da classe construtora .
 
-Agora devemos converter a classe orientada objetos para string para podemos debugar o codigo ou receber os logs para avaliar o funcionamento do código
+Agora devemos converter a classe orientada objetos para string para podemos debugar o código ou receber os logs para avaliar o funcionamento do código
 
 ```javascript
     toString(){
@@ -58,9 +58,9 @@ Agora devemos converter a classe orientada objetos para string para podemos debu
 
 com essa função acima é possível converter os objetos em Strings.
 
-o Hash possui 32 caracteres no código agente pode limitar a exibição dos caracteres usando a sintaxe substring.  mas isso não é obrigatório , se apagar .substring(0,10) os logs vao exibir o hash completo.
+o Hash possui 32 caracteres no código agente pode limitar a exibição dos caracteres usando a sintaxe substring.  mas isso não é obrigatório , se apagar .substring(0,10) os logs vão exibir o hash completo.
 
-Agora temos que exportar esssa classe para poder executar um script de teste 
+Agora temos que exportar essa classe para poder executar um script de teste 
 
 ```javascript
 module.exports = Block;
@@ -155,7 +155,7 @@ ainda falta uma função para gerar um valor de codificação randômico para o 
 
 agora podemos criar um primeiro bloco para teste
 
-no arquivo teste.js  vamo criar uma const
+no arquivo teste.js  vamos criar uma const
 
 ```javascript
 const primeiroBloco = Block.mineBlock(Block.genesis(), '$500');
@@ -190,7 +190,7 @@ agora vamos chamar o algoritmo na funçao static
     }
 ```
 
-a função chama o return SHA256 com as 4 propriedades do block e no final .toString para chamar no teste.
+a função acima chama o return SHA256 com as 4 propriedades do block e no final .toString para chamar no teste.
 
 ![](/assets/img/hash3.jpg)
 
