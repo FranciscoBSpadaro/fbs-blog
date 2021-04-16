@@ -129,8 +129,6 @@ Função genesis criada.
 
 ![](/assets/img/genesis.jpg "genesis block")
 
-
-
 **Função MineBlock**
 
 agora podemos gerar novos blocks usando a informação do bloco genesis , usando sintaxe static novamente os argumentos vem do ultimo bloco.
@@ -153,4 +151,12 @@ Date.now é um objeto do javascript com a função .now que é um valor do tempo
 
 const lastHash é a constante do valor do hash anterior lastBlock.hash
 
-ainda nao fazemos uma funçao para gerar um valor de codificaçao randomico para o hash
+ainda falta uma função para gerar um valor de codificação randômico para o hash
+
+agora podemos criar um primeiro bloco para teste
+
+no arquivo teste.js  vamo criar uma const
+
+```javascript
+const primeiroBloco = Block.mineBlock(Block.genesis(), '$500');
+```
