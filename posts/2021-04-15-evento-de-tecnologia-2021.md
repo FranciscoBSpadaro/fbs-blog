@@ -4,7 +4,7 @@ date: 2021-04-15 08:14:01
 title: Evento de Tecnologia 2021
 description: Alguns eventos que participei
 category: events
-color: "#7D669E"
+color: "#B31917"
 tags:
   - eventos
 ---
