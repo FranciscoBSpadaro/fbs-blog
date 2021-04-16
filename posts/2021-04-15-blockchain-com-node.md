@@ -102,7 +102,7 @@ console.log(block.toString());
 
 esses 4 dados sao aleatorios para testes , no caso sao os 4 elementos do blockchain
 
-executar o comando node. teste.js para  teste
+executar o comando  **node teste.js**   para  teste
 
 ![](/assets/img/block1.bmp)
 
