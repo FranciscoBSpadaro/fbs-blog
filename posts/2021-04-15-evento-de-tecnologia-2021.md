@@ -14,6 +14,4 @@ tags:
 
 <https://nextlevelweek.com/convite/franciscobspadaro>
 
-
-
 post incompleto
