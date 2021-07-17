@@ -34,14 +34,14 @@ collections:
           widget: 'string',
         }
       - {
-          label: 'Color',
-          name: 'color',
+          label: 'Background',
+          name: 'background',
           widget: 'select',
           options:
             [
               { label: 'red', value: '#B31917' },
               { label: 'blue', value: '#2DA0C3' },
-              { label: 'blue2', value: '#0373fc' },  
+              { label: 'blue2', value: '#0373fc' },
               { label: 'blue3', value: '#223453' },
               { label: 'yellow', value: '#D6BA32' },
               { label: 'orange', value: '#EB7728' },
