@@ -1,10 +1,11 @@
 ---
+color: "#2DA0C3"
 layout: post
 date: 2021-04-16 01:55:22
 title: "Formulário HTML + Netlify "
 description: Configurando o Netlify para enviar formulários html via e-mail
 category: HTML
-color: "#2DA0C3"
+background: "#D6BA32"
 tags:
   - HTML
 ---
