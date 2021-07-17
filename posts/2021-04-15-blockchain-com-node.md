@@ -1,10 +1,11 @@
 ---
+color: "#EB7728"
 layout: post
 date: 2021-04-15 08:28:10
 title: Blockchain com Node
 description: Exemplo de blockchain com Node
 category: nodejs
-color: "#EB7728"
+background: "#EB7728"
 tags:
   - node
   - Blockchain
