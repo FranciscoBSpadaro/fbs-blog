@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
 
@@ -18,7 +18,7 @@ const BlogList = props => {                                 // parametros para a
                                                                                           // nova pagina principal''index'' baseada no graphql
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <S.ListWrapper>
         {postList.map(
           ({
@@ -53,8 +53,8 @@ const BlogList = props => {                                 // parametros para a
   )
 }
 // variavel para o graphl skip = inteiro = var limit = inteiro ,  variaveis declaradas para filtrar a query com funcao skip e limit , prints na pasta
-export const query = graphql`                                    
-  query PostList($skip: Int!, $limit: Int!) {            
+export const query = graphql`
+  query PostList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
