@@ -29,7 +29,7 @@ const AboutPage = () => (
 <br/> Sou questionador e de mente empreendedora , não gosto de comodismo e sempre quero mudar e evoluir para o melhor.
 <br/> Busco me preparar para a Quarta Revolução industrial.
 <br/> <span role="img" aria-label="ipod">📟</span>  Entre em contato comigo Click no logotipo abaixo</p>
-<h2><Link to="https://fbsdev.netlify.app/"> <img src={fbsdevPNG} alt="FBS-DEV"></img> </Link></h2>
+<h2><Link to="https://fbs-dev.netlify.app/"> <img src={fbsdevPNG} alt="FBS-DEV"></img> </Link></h2>
 </S.MainContent>
   </Layout>
 
